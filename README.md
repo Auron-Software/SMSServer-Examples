@@ -7,7 +7,7 @@ The Auron SMS Server is a Windows server application that makes it easy to integ
 With the SMS Server you can: 
  * Automatically reply or forward E-mail, SMS or WhatsApp messages 
  * Setup automatic scripted message processing and fallback options
- * Send mass SMS or E-mail campagins 
+ * Send mass SMS or E-mail campaigns 
  * Setup multiple simultaneous connections to multiple providers
  * Supports HTTP REST API and many other integration methods
  * Programmable with C#, VB.Net, PHP, Delphi and many more languages
@@ -19,7 +19,7 @@ Common use cases are:
  * Alerting with automatic fallback
  * Sending appointment reminders
  * Automatic based reservation systems
- * SMS based fleed tracking
+ * SMS based fleet tracking
  * Interactive premium SMS games
  * And many more..
 
