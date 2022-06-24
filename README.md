@@ -11,7 +11,7 @@ With the SMS Server you can:
  * Setup multiple simultaneous connections to multiple providers
  * Supports HTTP REST API and many other integration methods
  * Programmable with C#, VB.Net, PHP, Delphi and many more languages
- * Supported protocols: SMPP, HTTP, GSM, Android Phones, SMTP, POP3, IMAP, Filesystem
+ * Supported protocols: SMPP (Client/server), HTTP (Client/server), GSM, Android Phones, SMTP, POP3, IMAP, Filesystem
  
 Common use cases are: 
  * Multifactor authentication
