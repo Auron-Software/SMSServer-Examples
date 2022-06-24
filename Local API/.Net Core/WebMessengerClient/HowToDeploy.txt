@@ -1,0 +1,26 @@
+Install the .net hosting bundle
+===============================
+https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-aspnetcore-6.0.0-windows-hosting-bundle-installer
+
+Create site
+===========
+On the IIS server, create a folder to contain the app's published folders and files. In a following step, the folder's path is provided to IIS as the physical path to the app. For more information on an app's deployment folder and file layout, see ASP.NET Core directory structure.
+
+In IIS Manager, open the server's node in the Connections panel. Right-click the Sites folder. Select Add Website from the contextual menu.
+
+Provide a Site name and set the Physical path to the app's deployment folder that you created. Provide the Binding configuration and create the website by selecting OK.
+
+Confirm the process model identity has the proper permissions.
+
+If the default identity of the app pool (Process Model > Identity) is changed from ApplicationPoolIdentity to another identity, verify that the new identity has the required permissions to access the app's folder, database, and other required resources. For example, the app pool requires read and write access to folders where the app reads and writes files.
+
+Publish from Visual Studio 2019
+===============================
+
+Right-click on the project in Solution Explorer and select Publish.
+In the Pick a publish target dialog, select the Folder publish option.
+Set the Folder or File Share path.
+    If you created a folder for the IIS site that's available on the development machine as a network share, provide the path to the share. The current user must have write access to publish to the share.
+    If you're unable to deploy directly to the IIS site folder on the IIS server, publish to a folder on removable media and physically move the published app to the IIS site folder on the server, which is the site's Physical path in IIS Manager. Move the contents of the bin/Release/{TARGET FRAMEWORK}/publish folder to the IIS site folder on the server, which is the site's Physical path in IIS Manager.
+Select the Publish button.
+

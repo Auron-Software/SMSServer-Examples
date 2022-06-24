@@ -1,0 +1,9 @@
+{
+    "Filter": "1=1"
+  , "Order": "ID DESC"
+  , "TypeID": "SMS"
+  , "Top": 100
+  , "ReadUncommitted": true
+  , "IgnoreAttachments": true
+  , "FromArchive": false
+}

@@ -1,0 +1,153 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+body
+{
+  
+}
+
+.navbar-brand img
+{
+  height: 48px;
+}
+
+#au-viewmessage-filenames {
+  margin-left: 1rem;
+  font-weight: 700;
+  max-width: 150px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.au-balloon-in {
+  background-color: lightgoldenrodyellow;
+  color: black;
+  border-radius: 0em 1em 1em 1em;
+}
+
+.au-balloon-out {
+  background-color: lightblue;
+  color: black;
+  border-radius: 1em 0em 1em 1em;
+}
+
+.au-balloon
+{
+  padding: 0.5rem;
+  margin: 0.5rem;  
+}
+
+.au-balloon-text
+{  
+  padding-top: 0.3rem; 
+}
+
+.au-balloon-sms
+{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.au-balloon-from {
+  font-style: italic;
+  font-size: 85%;  
+  color: #333;
+}
+
+.au-balloon-to {
+  font-style: italic;  
+  font-size: 85%;
+  color: #333;
+}
+
+.au-balloon-buttons {
+  padding-right: .5em;
+  text-align: right;
+  
+  transition: height .1s ease-out;
+  //display: none;
+  height: 0px;
+  overflow: hidden;
+}
+
+.au-balloon-buttons button {
+  margin-left: 0.2em;
+}
+
+/* top button box shadow would remain visible after menu is gone by button press*/
+.au-balloon-buttons button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.au-balloon-hamburger button
+{
+  background-color: inherit;
+  color: black;
+}
+
+.au-balloon-timestamp {
+  font-size: 85%;
+  font-style: italic;
+  color: #333;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.au-balloon-footer 
+{
+  margin-right: 0.5rem;  
+  height: 1rem;
+}
+
+.au-balloon-header {
+  height: 2.5rem;
+  margin-right: 0.5rem;
+  display: block;
+}
+
+#au-viewmessages-list {  
+  height: 1px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+#au-viewmessage-create {
+  /*height: 200px;*/
+  height: 13rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#au-viewmessage-create textarea
+{
+  resize: none;
+}
+
+.au-btn-stack-icon
+{
+  position: relative;
+}
+
+.au-tbn-stock-icon-overlay 
+{
+  position: absolute;
+  top: 0.75rem;
+  left: 1.18rem;
+}
+
+.au-main-container {
+}

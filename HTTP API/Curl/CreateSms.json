@@ -1,0 +1,10 @@
+{
+  "message": [
+  {  
+      "LocalID"                : 100
+    , "TypeID"                 : "SMS"
+    , "StatusID"               : "SCHEDULED"
+    , "ToAddress"              : "+4433221100"
+    , "Body"                   : "Hello, World from Auron Software!"
+  }]
+}
