@@ -20,7 +20,7 @@ Common use cases are:
  * Sending appointment reminders
  * Automatic based reservation systems
  * SMS based fleed tracking
- * Interactive premius SMS games
+ * Interactive premium SMS games
  * And many more..
 
 
