@@ -2,7 +2,7 @@
 #
 # Auron SMS Server
 #
-# (c) Copyright Auron Software - www.auronsoftware.com
+# (c) Copyright Auron Software - www.auronsoftware.com                                                      
 #
 # ========================================================================
 # DeleteMessages.ps1

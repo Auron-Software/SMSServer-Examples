@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 8.01.0622 */
-/* at Tue Jan 19 04:14:07 2038
+/* at Mon Jan 18 19:14:07 2038
  */
 /* Compiler settings for AxMmCfg.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
@@ -77,20 +77,6 @@ typedef interface IChannel IChannel;
 typedef interface IChannels IChannels;
 
 #endif 	/* __IChannels_FWD_DEFINED__ */
-
-
-#ifndef __ICampaign_FWD_DEFINED__
-#define __ICampaign_FWD_DEFINED__
-typedef interface ICampaign ICampaign;
-
-#endif 	/* __ICampaign_FWD_DEFINED__ */
-
-
-#ifndef __ICampaigns_FWD_DEFINED__
-#define __ICampaigns_FWD_DEFINED__
-typedef interface ICampaigns ICampaigns;
-
-#endif 	/* __ICampaigns_FWD_DEFINED__ */
 
 
 #ifndef __IMessageType_FWD_DEFINED__
@@ -272,30 +258,6 @@ typedef struct Channel Channel;
 #endif /* __cplusplus */
 
 #endif 	/* __Channel_FWD_DEFINED__ */
-
-
-#ifndef __Campaigns_FWD_DEFINED__
-#define __Campaigns_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class Campaigns Campaigns;
-#else
-typedef struct Campaigns Campaigns;
-#endif /* __cplusplus */
-
-#endif 	/* __Campaigns_FWD_DEFINED__ */
-
-
-#ifndef __Campaign_FWD_DEFINED__
-#define __Campaign_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class Campaign Campaign;
-#else
-typedef struct Campaign Campaign;
-#endif /* __cplusplus */
-
-#endif 	/* __Campaign_FWD_DEFINED__ */
 
 
 #ifndef __Channels_FWD_DEFINED__
@@ -586,12 +548,6 @@ EXTERN_C const IID IID_IConstants;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_SAVE_MODIFY( 
             /* [retval][out] */ long *Value) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_SAVE_NOSTATUS( 
-            /* [retval][out] */ long *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_SAVE_DONTNORMALIZE( 
-            /* [retval][out] */ long *Value) = 0;
-        
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_FINDFIRST_READ_UNCOMMITTED( 
             /* [retval][out] */ long *Value) = 0;
         
@@ -599,9 +555,6 @@ EXTERN_C const IID IID_IConstants;
             /* [retval][out] */ long *Value) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_FINDFIRST_GENERICMESSAGE( 
-            /* [retval][out] */ long *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_FINDFIRST_FROMARCHIVE( 
             /* [retval][out] */ long *Value) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FLAG_LOAD_IGNORE_ATTACHMENTS( 
@@ -718,45 +671,6 @@ EXTERN_C const IID IID_IConstants;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MESSAGEBODYFORMAT_SMS_WAPPUSH( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MESSAGETYPE_SMS( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MESSAGETYPE_EMAIL( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MESSAGETYPE_FILE( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MESSAGETYPE_SMPPSERVERBIND( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CHANNELSTATUS_DISCONNECTED( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CHANNELSTATUS_CONNECTING( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CHANNELSTATUS_CONNECTED( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CHANNELSTATUS_DISCONNECTING( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CHANNELSTATUS_ERROR( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BATCHSTATUS_SUCCESS( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BATCHSTATUS_CANCELLED( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BATCHSTATUS_FAILED( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BATCHSTATUS_OPEN( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
     };
     
     
@@ -847,14 +761,6 @@ EXTERN_C const IID IID_IConstants;
             IConstants * This,
             /* [retval][out] */ long *Value);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FLAG_SAVE_NOSTATUS )( 
-            IConstants * This,
-            /* [retval][out] */ long *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FLAG_SAVE_DONTNORMALIZE )( 
-            IConstants * This,
-            /* [retval][out] */ long *Value);
-        
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FLAG_FINDFIRST_READ_UNCOMMITTED )( 
             IConstants * This,
             /* [retval][out] */ long *Value);
@@ -864,10 +770,6 @@ EXTERN_C const IID IID_IConstants;
             /* [retval][out] */ long *Value);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FLAG_FINDFIRST_GENERICMESSAGE )( 
-            IConstants * This,
-            /* [retval][out] */ long *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FLAG_FINDFIRST_FROMARCHIVE )( 
             IConstants * This,
             /* [retval][out] */ long *Value);
         
@@ -1023,58 +925,6 @@ EXTERN_C const IID IID_IConstants;
             IConstants * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MESSAGETYPE_SMS )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MESSAGETYPE_EMAIL )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MESSAGETYPE_FILE )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MESSAGETYPE_SMPPSERVERBIND )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CHANNELSTATUS_DISCONNECTED )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CHANNELSTATUS_CONNECTING )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CHANNELSTATUS_CONNECTED )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CHANNELSTATUS_DISCONNECTING )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CHANNELSTATUS_ERROR )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BATCHSTATUS_SUCCESS )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BATCHSTATUS_CANCELLED )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BATCHSTATUS_FAILED )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BATCHSTATUS_OPEN )( 
-            IConstants * This,
-            /* [retval][out] */ BSTR *pVal);
-        
         END_INTERFACE
     } IConstantsVtbl;
 
@@ -1135,12 +985,6 @@ EXTERN_C const IID IID_IConstants;
 #define IConstants_get_FLAG_SAVE_MODIFY(This,Value)	\
     ( (This)->lpVtbl -> get_FLAG_SAVE_MODIFY(This,Value) ) 
 
-#define IConstants_get_FLAG_SAVE_NOSTATUS(This,Value)	\
-    ( (This)->lpVtbl -> get_FLAG_SAVE_NOSTATUS(This,Value) ) 
-
-#define IConstants_get_FLAG_SAVE_DONTNORMALIZE(This,Value)	\
-    ( (This)->lpVtbl -> get_FLAG_SAVE_DONTNORMALIZE(This,Value) ) 
-
 #define IConstants_get_FLAG_FINDFIRST_READ_UNCOMMITTED(This,Value)	\
     ( (This)->lpVtbl -> get_FLAG_FINDFIRST_READ_UNCOMMITTED(This,Value) ) 
 
@@ -1149,9 +993,6 @@ EXTERN_C const IID IID_IConstants;
 
 #define IConstants_get_FLAG_FINDFIRST_GENERICMESSAGE(This,Value)	\
     ( (This)->lpVtbl -> get_FLAG_FINDFIRST_GENERICMESSAGE(This,Value) ) 
-
-#define IConstants_get_FLAG_FINDFIRST_FROMARCHIVE(This,Value)	\
-    ( (This)->lpVtbl -> get_FLAG_FINDFIRST_FROMARCHIVE(This,Value) ) 
 
 #define IConstants_get_FLAG_LOAD_IGNORE_ATTACHMENTS(This,Value)	\
     ( (This)->lpVtbl -> get_FLAG_LOAD_IGNORE_ATTACHMENTS(This,Value) ) 
@@ -1266,45 +1107,6 @@ EXTERN_C const IID IID_IConstants;
 
 #define IConstants_get_MESSAGEBODYFORMAT_SMS_WAPPUSH(This,pVal)	\
     ( (This)->lpVtbl -> get_MESSAGEBODYFORMAT_SMS_WAPPUSH(This,pVal) ) 
-
-#define IConstants_get_MESSAGETYPE_SMS(This,pVal)	\
-    ( (This)->lpVtbl -> get_MESSAGETYPE_SMS(This,pVal) ) 
-
-#define IConstants_get_MESSAGETYPE_EMAIL(This,pVal)	\
-    ( (This)->lpVtbl -> get_MESSAGETYPE_EMAIL(This,pVal) ) 
-
-#define IConstants_get_MESSAGETYPE_FILE(This,pVal)	\
-    ( (This)->lpVtbl -> get_MESSAGETYPE_FILE(This,pVal) ) 
-
-#define IConstants_get_MESSAGETYPE_SMPPSERVERBIND(This,pVal)	\
-    ( (This)->lpVtbl -> get_MESSAGETYPE_SMPPSERVERBIND(This,pVal) ) 
-
-#define IConstants_get_CHANNELSTATUS_DISCONNECTED(This,pVal)	\
-    ( (This)->lpVtbl -> get_CHANNELSTATUS_DISCONNECTED(This,pVal) ) 
-
-#define IConstants_get_CHANNELSTATUS_CONNECTING(This,pVal)	\
-    ( (This)->lpVtbl -> get_CHANNELSTATUS_CONNECTING(This,pVal) ) 
-
-#define IConstants_get_CHANNELSTATUS_CONNECTED(This,pVal)	\
-    ( (This)->lpVtbl -> get_CHANNELSTATUS_CONNECTED(This,pVal) ) 
-
-#define IConstants_get_CHANNELSTATUS_DISCONNECTING(This,pVal)	\
-    ( (This)->lpVtbl -> get_CHANNELSTATUS_DISCONNECTING(This,pVal) ) 
-
-#define IConstants_get_CHANNELSTATUS_ERROR(This,pVal)	\
-    ( (This)->lpVtbl -> get_CHANNELSTATUS_ERROR(This,pVal) ) 
-
-#define IConstants_get_BATCHSTATUS_SUCCESS(This,pVal)	\
-    ( (This)->lpVtbl -> get_BATCHSTATUS_SUCCESS(This,pVal) ) 
-
-#define IConstants_get_BATCHSTATUS_CANCELLED(This,pVal)	\
-    ( (This)->lpVtbl -> get_BATCHSTATUS_CANCELLED(This,pVal) ) 
-
-#define IConstants_get_BATCHSTATUS_FAILED(This,pVal)	\
-    ( (This)->lpVtbl -> get_BATCHSTATUS_FAILED(This,pVal) ) 
-
-#define IConstants_get_BATCHSTATUS_OPEN(This,pVal)	\
-    ( (This)->lpVtbl -> get_BATCHSTATUS_OPEN(This,pVal) ) 
 
 #endif /* COBJMACROS */
 
@@ -1683,9 +1485,6 @@ EXTERN_C const IID IID_IChannel;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MessageTypeID( 
             /* [retval][out] */ BSTR *Value) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MessageTypeID( 
-            /* [in] */ BSTR Value) = 0;
-        
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Detached( 
             /* [in] */ VARIANT_BOOL Val) = 0;
         
@@ -1703,18 +1502,6 @@ EXTERN_C const IID IID_IChannel;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_QueueTimeoutSec( 
             /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_StatusID( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_StatusID( 
-            /* [in] */ BSTR Val) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ConnectedSessions( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ConnectedSessions( 
-            /* [in] */ LONG Val) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FieldCount( 
             /* [retval][out] */ long *Value) = 0;
@@ -1865,10 +1652,6 @@ EXTERN_C const IID IID_IChannel;
             IChannel * This,
             /* [retval][out] */ BSTR *Value);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MessageTypeID )( 
-            IChannel * This,
-            /* [in] */ BSTR Value);
-        
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Detached )( 
             IChannel * This,
             /* [in] */ VARIANT_BOOL Val);
@@ -1892,22 +1675,6 @@ EXTERN_C const IID IID_IChannel;
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_QueueTimeoutSec )( 
             IChannel * This,
             /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_StatusID )( 
-            IChannel * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_StatusID )( 
-            IChannel * This,
-            /* [in] */ BSTR Val);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ConnectedSessions )( 
-            IChannel * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ConnectedSessions )( 
-            IChannel * This,
-            /* [in] */ LONG Val);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FieldCount )( 
             IChannel * This,
@@ -2029,9 +1796,6 @@ EXTERN_C const IID IID_IChannel;
 #define IChannel_get_MessageTypeID(This,Value)	\
     ( (This)->lpVtbl -> get_MessageTypeID(This,Value) ) 
 
-#define IChannel_put_MessageTypeID(This,Value)	\
-    ( (This)->lpVtbl -> put_MessageTypeID(This,Value) ) 
-
 #define IChannel_put_Detached(This,Val)	\
     ( (This)->lpVtbl -> put_Detached(This,Val) ) 
 
@@ -2049,18 +1813,6 @@ EXTERN_C const IID IID_IChannel;
 
 #define IChannel_get_QueueTimeoutSec(This,pVal)	\
     ( (This)->lpVtbl -> get_QueueTimeoutSec(This,pVal) ) 
-
-#define IChannel_get_StatusID(This,pVal)	\
-    ( (This)->lpVtbl -> get_StatusID(This,pVal) ) 
-
-#define IChannel_put_StatusID(This,Val)	\
-    ( (This)->lpVtbl -> put_StatusID(This,Val) ) 
-
-#define IChannel_get_ConnectedSessions(This,pVal)	\
-    ( (This)->lpVtbl -> get_ConnectedSessions(This,pVal) ) 
-
-#define IChannel_put_ConnectedSessions(This,Val)	\
-    ( (This)->lpVtbl -> put_ConnectedSessions(This,Val) ) 
 
 #define IChannel_get_FieldCount(This,Value)	\
     ( (This)->lpVtbl -> get_FieldCount(This,Value) ) 
@@ -2145,16 +1897,11 @@ EXTERN_C const IID IID_IChannels;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE HasShutdown( 
             /* [retval][out] */ VARIANT_BOOL *pVal) = 0;
         
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE HasStatusUpdate( 
-            /* [retval][out] */ VARIANT_BOOL *pVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE NotifyUpdate( 
             /* [defaultvalue][in] */ BSTR ChannelID = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE NotifyShutdown( 
             /* [defaultvalue][in] */ BSTR ChannelID = (BSTR)L"") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE NotifyStatusUpdate( void) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE StartChangeListening( 
             /* [defaultvalue][in] */ BSTR ChannelID = (BSTR)L"") = 0;
@@ -2261,10 +2008,6 @@ EXTERN_C const IID IID_IChannels;
             IChannels * This,
             /* [retval][out] */ VARIANT_BOOL *pVal);
         
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *HasStatusUpdate )( 
-            IChannels * This,
-            /* [retval][out] */ VARIANT_BOOL *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NotifyUpdate )( 
             IChannels * This,
             /* [defaultvalue][in] */ BSTR ChannelID);
@@ -2272,9 +2015,6 @@ EXTERN_C const IID IID_IChannels;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NotifyShutdown )( 
             IChannels * This,
             /* [defaultvalue][in] */ BSTR ChannelID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NotifyStatusUpdate )( 
-            IChannels * This);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *StartChangeListening )( 
             IChannels * This,
@@ -2346,17 +2086,11 @@ EXTERN_C const IID IID_IChannels;
 #define IChannels_HasShutdown(This,pVal)	\
     ( (This)->lpVtbl -> HasShutdown(This,pVal) ) 
 
-#define IChannels_HasStatusUpdate(This,pVal)	\
-    ( (This)->lpVtbl -> HasStatusUpdate(This,pVal) ) 
-
 #define IChannels_NotifyUpdate(This,ChannelID)	\
     ( (This)->lpVtbl -> NotifyUpdate(This,ChannelID) ) 
 
 #define IChannels_NotifyShutdown(This,ChannelID)	\
     ( (This)->lpVtbl -> NotifyShutdown(This,ChannelID) ) 
-
-#define IChannels_NotifyStatusUpdate(This)	\
-    ( (This)->lpVtbl -> NotifyStatusUpdate(This) ) 
 
 #define IChannels_StartChangeListening(This,ChannelID)	\
     ( (This)->lpVtbl -> StartChangeListening(This,ChannelID) ) 
@@ -2373,1494 +2107,6 @@ EXTERN_C const IID IID_IChannels;
 
 
 #endif 	/* __IChannels_INTERFACE_DEFINED__ */
-
-
-#ifndef __ICampaign_INTERFACE_DEFINED__
-#define __ICampaign_INTERFACE_DEFINED__
-
-/* interface ICampaign */
-/* [unique][helpstring][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_ICampaign;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("FD971594-50A4-4377-AA58-DB3EFBD642D4")
-    ICampaign : public IDispatch
-    {
-    public:
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
-            /* [retval][out] */ long *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ID( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Description( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ChannelID( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MessageTypeID( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_GenerateBatchRecord( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DataSource( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DatabaseEngine( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_AccessDatabasePath( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_AccessDatabasePassword( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_AccessDatabaseTable( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MsSqlServer( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MsSqlUseWindowsAuth( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MsSqlLogin( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MsSqlPassword( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MsSqlDatabase( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MsSqlTable( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MySqlServer( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MySqlPort( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MySqlLogin( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MySqlPassword( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MySqlDatabase( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MySqlTable( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_GenericDbConnectionString( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_GenericDbTable( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ExcelPath( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ExcelSheet( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ExcelFirstRowIsHeader( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ExcelSkipDuplicates( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CsvFile( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CsvDelimiter( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CsvTextQualifier( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CsvFirstRowIsHeader( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_CsvSkipDuplicateRows( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LdapHost( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LdapLogin( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LdapPassword( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsRecipientField( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsFormat( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsCharacterSet( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsPriority( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsValidityMin( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsFlash( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsUdh( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailRecipientField( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailCc( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailBcc( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailPriority( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailHtmlToPlainText( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailSubject( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsMaxLength( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsMessage( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailAttachments( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailMessagePlain( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_EmailMessageHtml( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmsAttachments( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ID( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Description( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ChannelID( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MessageTypeID( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_GenerateBatchRecord( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DataSource( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DatabaseEngine( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_AccessDatabasePath( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_AccessDatabasePassword( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_AccessDatabaseTable( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MsSqlServer( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MsSqlUseWindowsAuth( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MsSqlLogin( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MsSqlPassword( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MsSqlDatabase( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MsSqlTable( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MySqlServer( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MySqlPort( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MySqlLogin( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MySqlPassword( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MySqlDatabase( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MySqlTable( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_GenericDbConnectionString( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_GenericDbTable( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ExcelPath( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ExcelSheet( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ExcelFirstRowIsHeader( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ExcelSkipDuplicates( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_CsvFile( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_CsvDelimiter( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_CsvTextQualifier( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_CsvFirstRowIsHeader( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_CsvSkipDuplicateRows( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_LdapHost( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_LdapLogin( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_LdapPassword( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsRecipientField( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsFormat( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsCharacterSet( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsPriority( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsValidityMin( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsFlash( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsUdh( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailRecipientField( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailCc( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailBcc( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailPriority( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailHtmlToPlainText( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailSubject( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsMaxLength( 
-            /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsMessage( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailAttachments( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailMessagePlain( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_EmailMessageHtml( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmsAttachments( 
-            /* [in] */ BSTR Value) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct ICampaignVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICampaign * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICampaign * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICampaign * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICampaign * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICampaign * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICampaign * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICampaign * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
-            ICampaign * This,
-            /* [retval][out] */ long *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ID )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ChannelID )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MessageTypeID )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_GenerateBatchRecord )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DataSource )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DatabaseEngine )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AccessDatabasePath )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AccessDatabasePassword )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AccessDatabaseTable )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MsSqlServer )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MsSqlUseWindowsAuth )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MsSqlLogin )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MsSqlPassword )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MsSqlDatabase )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MsSqlTable )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MySqlServer )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MySqlPort )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MySqlLogin )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MySqlPassword )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MySqlDatabase )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MySqlTable )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_GenericDbConnectionString )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_GenericDbTable )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExcelPath )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExcelSheet )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExcelFirstRowIsHeader )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExcelSkipDuplicates )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CsvFile )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CsvDelimiter )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CsvTextQualifier )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CsvFirstRowIsHeader )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CsvSkipDuplicateRows )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LdapHost )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LdapLogin )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LdapPassword )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsRecipientField )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsFormat )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsCharacterSet )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsPriority )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsValidityMin )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsFlash )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsUdh )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailRecipientField )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailCc )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailBcc )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailPriority )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailHtmlToPlainText )( 
-            ICampaign * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailSubject )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsMaxLength )( 
-            ICampaign * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsMessage )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailAttachments )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailMessagePlain )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EmailMessageHtml )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SmsAttachments )( 
-            ICampaign * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ID )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Description )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ChannelID )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MessageTypeID )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_GenerateBatchRecord )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DataSource )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DatabaseEngine )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AccessDatabasePath )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AccessDatabasePassword )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AccessDatabaseTable )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MsSqlServer )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MsSqlUseWindowsAuth )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MsSqlLogin )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MsSqlPassword )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MsSqlDatabase )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MsSqlTable )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MySqlServer )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MySqlPort )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MySqlLogin )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MySqlPassword )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MySqlDatabase )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MySqlTable )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_GenericDbConnectionString )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_GenericDbTable )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ExcelPath )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ExcelSheet )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ExcelFirstRowIsHeader )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ExcelSkipDuplicates )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_CsvFile )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_CsvDelimiter )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_CsvTextQualifier )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_CsvFirstRowIsHeader )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_CsvSkipDuplicateRows )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_LdapHost )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_LdapLogin )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_LdapPassword )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsRecipientField )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsFormat )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsCharacterSet )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsPriority )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsValidityMin )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsFlash )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsUdh )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailRecipientField )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailCc )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailBcc )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailPriority )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailHtmlToPlainText )( 
-            ICampaign * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailSubject )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsMaxLength )( 
-            ICampaign * This,
-            /* [in] */ LONG Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsMessage )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailAttachments )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailMessagePlain )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_EmailMessageHtml )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmsAttachments )( 
-            ICampaign * This,
-            /* [in] */ BSTR Value);
-        
-        END_INTERFACE
-    } ICampaignVtbl;
-
-    interface ICampaign
-    {
-        CONST_VTBL struct ICampaignVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define ICampaign_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define ICampaign_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define ICampaign_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define ICampaign_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define ICampaign_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define ICampaign_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define ICampaign_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-
-#define ICampaign_get_LastError(This,Value)	\
-    ( (This)->lpVtbl -> get_LastError(This,Value) ) 
-
-#define ICampaign_get_ID(This,Value)	\
-    ( (This)->lpVtbl -> get_ID(This,Value) ) 
-
-#define ICampaign_get_Description(This,Value)	\
-    ( (This)->lpVtbl -> get_Description(This,Value) ) 
-
-#define ICampaign_get_ChannelID(This,Value)	\
-    ( (This)->lpVtbl -> get_ChannelID(This,Value) ) 
-
-#define ICampaign_get_MessageTypeID(This,Value)	\
-    ( (This)->lpVtbl -> get_MessageTypeID(This,Value) ) 
-
-#define ICampaign_get_GenerateBatchRecord(This,Value)	\
-    ( (This)->lpVtbl -> get_GenerateBatchRecord(This,Value) ) 
-
-#define ICampaign_get_DataSource(This,Value)	\
-    ( (This)->lpVtbl -> get_DataSource(This,Value) ) 
-
-#define ICampaign_get_DatabaseEngine(This,Value)	\
-    ( (This)->lpVtbl -> get_DatabaseEngine(This,Value) ) 
-
-#define ICampaign_get_AccessDatabasePath(This,Value)	\
-    ( (This)->lpVtbl -> get_AccessDatabasePath(This,Value) ) 
-
-#define ICampaign_get_AccessDatabasePassword(This,Value)	\
-    ( (This)->lpVtbl -> get_AccessDatabasePassword(This,Value) ) 
-
-#define ICampaign_get_AccessDatabaseTable(This,Value)	\
-    ( (This)->lpVtbl -> get_AccessDatabaseTable(This,Value) ) 
-
-#define ICampaign_get_MsSqlServer(This,Value)	\
-    ( (This)->lpVtbl -> get_MsSqlServer(This,Value) ) 
-
-#define ICampaign_get_MsSqlUseWindowsAuth(This,Value)	\
-    ( (This)->lpVtbl -> get_MsSqlUseWindowsAuth(This,Value) ) 
-
-#define ICampaign_get_MsSqlLogin(This,Value)	\
-    ( (This)->lpVtbl -> get_MsSqlLogin(This,Value) ) 
-
-#define ICampaign_get_MsSqlPassword(This,Value)	\
-    ( (This)->lpVtbl -> get_MsSqlPassword(This,Value) ) 
-
-#define ICampaign_get_MsSqlDatabase(This,Value)	\
-    ( (This)->lpVtbl -> get_MsSqlDatabase(This,Value) ) 
-
-#define ICampaign_get_MsSqlTable(This,Value)	\
-    ( (This)->lpVtbl -> get_MsSqlTable(This,Value) ) 
-
-#define ICampaign_get_MySqlServer(This,Value)	\
-    ( (This)->lpVtbl -> get_MySqlServer(This,Value) ) 
-
-#define ICampaign_get_MySqlPort(This,Value)	\
-    ( (This)->lpVtbl -> get_MySqlPort(This,Value) ) 
-
-#define ICampaign_get_MySqlLogin(This,Value)	\
-    ( (This)->lpVtbl -> get_MySqlLogin(This,Value) ) 
-
-#define ICampaign_get_MySqlPassword(This,Value)	\
-    ( (This)->lpVtbl -> get_MySqlPassword(This,Value) ) 
-
-#define ICampaign_get_MySqlDatabase(This,Value)	\
-    ( (This)->lpVtbl -> get_MySqlDatabase(This,Value) ) 
-
-#define ICampaign_get_MySqlTable(This,Value)	\
-    ( (This)->lpVtbl -> get_MySqlTable(This,Value) ) 
-
-#define ICampaign_get_GenericDbConnectionString(This,Value)	\
-    ( (This)->lpVtbl -> get_GenericDbConnectionString(This,Value) ) 
-
-#define ICampaign_get_GenericDbTable(This,Value)	\
-    ( (This)->lpVtbl -> get_GenericDbTable(This,Value) ) 
-
-#define ICampaign_get_ExcelPath(This,Value)	\
-    ( (This)->lpVtbl -> get_ExcelPath(This,Value) ) 
-
-#define ICampaign_get_ExcelSheet(This,Value)	\
-    ( (This)->lpVtbl -> get_ExcelSheet(This,Value) ) 
-
-#define ICampaign_get_ExcelFirstRowIsHeader(This,Value)	\
-    ( (This)->lpVtbl -> get_ExcelFirstRowIsHeader(This,Value) ) 
-
-#define ICampaign_get_ExcelSkipDuplicates(This,Value)	\
-    ( (This)->lpVtbl -> get_ExcelSkipDuplicates(This,Value) ) 
-
-#define ICampaign_get_CsvFile(This,Value)	\
-    ( (This)->lpVtbl -> get_CsvFile(This,Value) ) 
-
-#define ICampaign_get_CsvDelimiter(This,Value)	\
-    ( (This)->lpVtbl -> get_CsvDelimiter(This,Value) ) 
-
-#define ICampaign_get_CsvTextQualifier(This,Value)	\
-    ( (This)->lpVtbl -> get_CsvTextQualifier(This,Value) ) 
-
-#define ICampaign_get_CsvFirstRowIsHeader(This,Value)	\
-    ( (This)->lpVtbl -> get_CsvFirstRowIsHeader(This,Value) ) 
-
-#define ICampaign_get_CsvSkipDuplicateRows(This,Value)	\
-    ( (This)->lpVtbl -> get_CsvSkipDuplicateRows(This,Value) ) 
-
-#define ICampaign_get_LdapHost(This,Value)	\
-    ( (This)->lpVtbl -> get_LdapHost(This,Value) ) 
-
-#define ICampaign_get_LdapLogin(This,Value)	\
-    ( (This)->lpVtbl -> get_LdapLogin(This,Value) ) 
-
-#define ICampaign_get_LdapPassword(This,Value)	\
-    ( (This)->lpVtbl -> get_LdapPassword(This,Value) ) 
-
-#define ICampaign_get_SmsRecipientField(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsRecipientField(This,Value) ) 
-
-#define ICampaign_get_SmsFormat(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsFormat(This,Value) ) 
-
-#define ICampaign_get_SmsCharacterSet(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsCharacterSet(This,Value) ) 
-
-#define ICampaign_get_SmsPriority(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsPriority(This,Value) ) 
-
-#define ICampaign_get_SmsValidityMin(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsValidityMin(This,Value) ) 
-
-#define ICampaign_get_SmsFlash(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsFlash(This,Value) ) 
-
-#define ICampaign_get_SmsUdh(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsUdh(This,Value) ) 
-
-#define ICampaign_get_EmailRecipientField(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailRecipientField(This,Value) ) 
-
-#define ICampaign_get_EmailCc(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailCc(This,Value) ) 
-
-#define ICampaign_get_EmailBcc(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailBcc(This,Value) ) 
-
-#define ICampaign_get_EmailPriority(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailPriority(This,Value) ) 
-
-#define ICampaign_get_EmailHtmlToPlainText(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailHtmlToPlainText(This,Value) ) 
-
-#define ICampaign_get_EmailSubject(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailSubject(This,Value) ) 
-
-#define ICampaign_get_SmsMaxLength(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsMaxLength(This,Value) ) 
-
-#define ICampaign_get_SmsMessage(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsMessage(This,Value) ) 
-
-#define ICampaign_get_EmailAttachments(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailAttachments(This,Value) ) 
-
-#define ICampaign_get_EmailMessagePlain(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailMessagePlain(This,Value) ) 
-
-#define ICampaign_get_EmailMessageHtml(This,Value)	\
-    ( (This)->lpVtbl -> get_EmailMessageHtml(This,Value) ) 
-
-#define ICampaign_get_SmsAttachments(This,Value)	\
-    ( (This)->lpVtbl -> get_SmsAttachments(This,Value) ) 
-
-#define ICampaign_put_ID(This,Value)	\
-    ( (This)->lpVtbl -> put_ID(This,Value) ) 
-
-#define ICampaign_put_Description(This,Value)	\
-    ( (This)->lpVtbl -> put_Description(This,Value) ) 
-
-#define ICampaign_put_ChannelID(This,Value)	\
-    ( (This)->lpVtbl -> put_ChannelID(This,Value) ) 
-
-#define ICampaign_put_MessageTypeID(This,Value)	\
-    ( (This)->lpVtbl -> put_MessageTypeID(This,Value) ) 
-
-#define ICampaign_put_GenerateBatchRecord(This,Value)	\
-    ( (This)->lpVtbl -> put_GenerateBatchRecord(This,Value) ) 
-
-#define ICampaign_put_DataSource(This,Value)	\
-    ( (This)->lpVtbl -> put_DataSource(This,Value) ) 
-
-#define ICampaign_put_DatabaseEngine(This,Value)	\
-    ( (This)->lpVtbl -> put_DatabaseEngine(This,Value) ) 
-
-#define ICampaign_put_AccessDatabasePath(This,Value)	\
-    ( (This)->lpVtbl -> put_AccessDatabasePath(This,Value) ) 
-
-#define ICampaign_put_AccessDatabasePassword(This,Value)	\
-    ( (This)->lpVtbl -> put_AccessDatabasePassword(This,Value) ) 
-
-#define ICampaign_put_AccessDatabaseTable(This,Value)	\
-    ( (This)->lpVtbl -> put_AccessDatabaseTable(This,Value) ) 
-
-#define ICampaign_put_MsSqlServer(This,Value)	\
-    ( (This)->lpVtbl -> put_MsSqlServer(This,Value) ) 
-
-#define ICampaign_put_MsSqlUseWindowsAuth(This,Value)	\
-    ( (This)->lpVtbl -> put_MsSqlUseWindowsAuth(This,Value) ) 
-
-#define ICampaign_put_MsSqlLogin(This,Value)	\
-    ( (This)->lpVtbl -> put_MsSqlLogin(This,Value) ) 
-
-#define ICampaign_put_MsSqlPassword(This,Value)	\
-    ( (This)->lpVtbl -> put_MsSqlPassword(This,Value) ) 
-
-#define ICampaign_put_MsSqlDatabase(This,Value)	\
-    ( (This)->lpVtbl -> put_MsSqlDatabase(This,Value) ) 
-
-#define ICampaign_put_MsSqlTable(This,Value)	\
-    ( (This)->lpVtbl -> put_MsSqlTable(This,Value) ) 
-
-#define ICampaign_put_MySqlServer(This,Value)	\
-    ( (This)->lpVtbl -> put_MySqlServer(This,Value) ) 
-
-#define ICampaign_put_MySqlPort(This,Value)	\
-    ( (This)->lpVtbl -> put_MySqlPort(This,Value) ) 
-
-#define ICampaign_put_MySqlLogin(This,Value)	\
-    ( (This)->lpVtbl -> put_MySqlLogin(This,Value) ) 
-
-#define ICampaign_put_MySqlPassword(This,Value)	\
-    ( (This)->lpVtbl -> put_MySqlPassword(This,Value) ) 
-
-#define ICampaign_put_MySqlDatabase(This,Value)	\
-    ( (This)->lpVtbl -> put_MySqlDatabase(This,Value) ) 
-
-#define ICampaign_put_MySqlTable(This,Value)	\
-    ( (This)->lpVtbl -> put_MySqlTable(This,Value) ) 
-
-#define ICampaign_put_GenericDbConnectionString(This,Value)	\
-    ( (This)->lpVtbl -> put_GenericDbConnectionString(This,Value) ) 
-
-#define ICampaign_put_GenericDbTable(This,Value)	\
-    ( (This)->lpVtbl -> put_GenericDbTable(This,Value) ) 
-
-#define ICampaign_put_ExcelPath(This,Value)	\
-    ( (This)->lpVtbl -> put_ExcelPath(This,Value) ) 
-
-#define ICampaign_put_ExcelSheet(This,Value)	\
-    ( (This)->lpVtbl -> put_ExcelSheet(This,Value) ) 
-
-#define ICampaign_put_ExcelFirstRowIsHeader(This,Value)	\
-    ( (This)->lpVtbl -> put_ExcelFirstRowIsHeader(This,Value) ) 
-
-#define ICampaign_put_ExcelSkipDuplicates(This,Value)	\
-    ( (This)->lpVtbl -> put_ExcelSkipDuplicates(This,Value) ) 
-
-#define ICampaign_put_CsvFile(This,Value)	\
-    ( (This)->lpVtbl -> put_CsvFile(This,Value) ) 
-
-#define ICampaign_put_CsvDelimiter(This,Value)	\
-    ( (This)->lpVtbl -> put_CsvDelimiter(This,Value) ) 
-
-#define ICampaign_put_CsvTextQualifier(This,Value)	\
-    ( (This)->lpVtbl -> put_CsvTextQualifier(This,Value) ) 
-
-#define ICampaign_put_CsvFirstRowIsHeader(This,Value)	\
-    ( (This)->lpVtbl -> put_CsvFirstRowIsHeader(This,Value) ) 
-
-#define ICampaign_put_CsvSkipDuplicateRows(This,Value)	\
-    ( (This)->lpVtbl -> put_CsvSkipDuplicateRows(This,Value) ) 
-
-#define ICampaign_put_LdapHost(This,Value)	\
-    ( (This)->lpVtbl -> put_LdapHost(This,Value) ) 
-
-#define ICampaign_put_LdapLogin(This,Value)	\
-    ( (This)->lpVtbl -> put_LdapLogin(This,Value) ) 
-
-#define ICampaign_put_LdapPassword(This,Value)	\
-    ( (This)->lpVtbl -> put_LdapPassword(This,Value) ) 
-
-#define ICampaign_put_SmsRecipientField(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsRecipientField(This,Value) ) 
-
-#define ICampaign_put_SmsFormat(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsFormat(This,Value) ) 
-
-#define ICampaign_put_SmsCharacterSet(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsCharacterSet(This,Value) ) 
-
-#define ICampaign_put_SmsPriority(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsPriority(This,Value) ) 
-
-#define ICampaign_put_SmsValidityMin(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsValidityMin(This,Value) ) 
-
-#define ICampaign_put_SmsFlash(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsFlash(This,Value) ) 
-
-#define ICampaign_put_SmsUdh(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsUdh(This,Value) ) 
-
-#define ICampaign_put_EmailRecipientField(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailRecipientField(This,Value) ) 
-
-#define ICampaign_put_EmailCc(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailCc(This,Value) ) 
-
-#define ICampaign_put_EmailBcc(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailBcc(This,Value) ) 
-
-#define ICampaign_put_EmailPriority(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailPriority(This,Value) ) 
-
-#define ICampaign_put_EmailHtmlToPlainText(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailHtmlToPlainText(This,Value) ) 
-
-#define ICampaign_put_EmailSubject(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailSubject(This,Value) ) 
-
-#define ICampaign_put_SmsMaxLength(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsMaxLength(This,Value) ) 
-
-#define ICampaign_put_SmsMessage(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsMessage(This,Value) ) 
-
-#define ICampaign_put_EmailAttachments(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailAttachments(This,Value) ) 
-
-#define ICampaign_put_EmailMessagePlain(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailMessagePlain(This,Value) ) 
-
-#define ICampaign_put_EmailMessageHtml(This,Value)	\
-    ( (This)->lpVtbl -> put_EmailMessageHtml(This,Value) ) 
-
-#define ICampaign_put_SmsAttachments(This,Value)	\
-    ( (This)->lpVtbl -> put_SmsAttachments(This,Value) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __ICampaign_INTERFACE_DEFINED__ */
-
-
-#ifndef __ICampaigns_INTERFACE_DEFINED__
-#define __ICampaigns_INTERFACE_DEFINED__
-
-/* interface ICampaigns */
-/* [unique][helpstring][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_ICampaigns;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("AE795E50-84F0-4B6D-B7D7-BE64968340EE")
-    ICampaigns : public IDispatch
-    {
-    public:
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
-            /* [retval][out] */ long *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Create( 
-            /* [retval][out] */ ICampaign **ppVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Load( 
-            /* [in] */ BSTR ID,
-            /* [retval][out] */ ICampaign **ppVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Save( 
-            /* [in] */ ICampaign *Campaign,
-            /* [defaultvalue][in] */ LONG Flags = 0) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Delete( 
-            /* [in] */ BSTR Filter) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE FindFirstCampaign( 
-            /* [defaultvalue][in] */ BSTR Filter,
-            /* [retval][out] */ ICampaign **ppVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE FindNextCampaign( 
-            /* [retval][out] */ ICampaign **ppVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE StartBatch( 
-            /* [in] */ BSTR Description,
-            /* [in] */ LONG Messages,
-            /* [defaultvalue][in] */ BSTR CampaignID,
-            /* [retval][out] */ LONG *pBatchID) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE StopBatch( 
-            /* [in] */ LONG BatchID,
-            /* [defaultvalue][in] */ BSTR StatusID = (BSTR)L"SUCCESS") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE HasUpdate( 
-            /* [retval][out] */ VARIANT_BOOL *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE NotifyUpdate( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE StartChangeListening( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE StopChangeListening( void) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct ICampaignsVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICampaigns * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICampaigns * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICampaigns * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICampaigns * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICampaigns * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICampaigns * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICampaigns * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
-            ICampaigns * This,
-            /* [retval][out] */ long *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Create )( 
-            ICampaigns * This,
-            /* [retval][out] */ ICampaign **ppVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Load )( 
-            ICampaigns * This,
-            /* [in] */ BSTR ID,
-            /* [retval][out] */ ICampaign **ppVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
-            ICampaigns * This,
-            /* [in] */ ICampaign *Campaign,
-            /* [defaultvalue][in] */ LONG Flags);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Delete )( 
-            ICampaigns * This,
-            /* [in] */ BSTR Filter);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *FindFirstCampaign )( 
-            ICampaigns * This,
-            /* [defaultvalue][in] */ BSTR Filter,
-            /* [retval][out] */ ICampaign **ppVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *FindNextCampaign )( 
-            ICampaigns * This,
-            /* [retval][out] */ ICampaign **ppVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *StartBatch )( 
-            ICampaigns * This,
-            /* [in] */ BSTR Description,
-            /* [in] */ LONG Messages,
-            /* [defaultvalue][in] */ BSTR CampaignID,
-            /* [retval][out] */ LONG *pBatchID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *StopBatch )( 
-            ICampaigns * This,
-            /* [in] */ LONG BatchID,
-            /* [defaultvalue][in] */ BSTR StatusID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *HasUpdate )( 
-            ICampaigns * This,
-            /* [retval][out] */ VARIANT_BOOL *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NotifyUpdate )( 
-            ICampaigns * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *StartChangeListening )( 
-            ICampaigns * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *StopChangeListening )( 
-            ICampaigns * This);
-        
-        END_INTERFACE
-    } ICampaignsVtbl;
-
-    interface ICampaigns
-    {
-        CONST_VTBL struct ICampaignsVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define ICampaigns_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define ICampaigns_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define ICampaigns_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define ICampaigns_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define ICampaigns_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define ICampaigns_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define ICampaigns_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-
-#define ICampaigns_get_LastError(This,Value)	\
-    ( (This)->lpVtbl -> get_LastError(This,Value) ) 
-
-#define ICampaigns_Create(This,ppVal)	\
-    ( (This)->lpVtbl -> Create(This,ppVal) ) 
-
-#define ICampaigns_Load(This,ID,ppVal)	\
-    ( (This)->lpVtbl -> Load(This,ID,ppVal) ) 
-
-#define ICampaigns_Save(This,Campaign,Flags)	\
-    ( (This)->lpVtbl -> Save(This,Campaign,Flags) ) 
-
-#define ICampaigns_Delete(This,Filter)	\
-    ( (This)->lpVtbl -> Delete(This,Filter) ) 
-
-#define ICampaigns_FindFirstCampaign(This,Filter,ppVal)	\
-    ( (This)->lpVtbl -> FindFirstCampaign(This,Filter,ppVal) ) 
-
-#define ICampaigns_FindNextCampaign(This,ppVal)	\
-    ( (This)->lpVtbl -> FindNextCampaign(This,ppVal) ) 
-
-#define ICampaigns_StartBatch(This,Description,Messages,CampaignID,pBatchID)	\
-    ( (This)->lpVtbl -> StartBatch(This,Description,Messages,CampaignID,pBatchID) ) 
-
-#define ICampaigns_StopBatch(This,BatchID,StatusID)	\
-    ( (This)->lpVtbl -> StopBatch(This,BatchID,StatusID) ) 
-
-#define ICampaigns_HasUpdate(This,pVal)	\
-    ( (This)->lpVtbl -> HasUpdate(This,pVal) ) 
-
-#define ICampaigns_NotifyUpdate(This)	\
-    ( (This)->lpVtbl -> NotifyUpdate(This) ) 
-
-#define ICampaigns_StartChangeListening(This)	\
-    ( (This)->lpVtbl -> StartChangeListening(This) ) 
-
-#define ICampaigns_StopChangeListening(This)	\
-    ( (This)->lpVtbl -> StopChangeListening(This) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __ICampaigns_INTERFACE_DEFINED__ */
 
 
 #ifndef __IMessageType_INTERFACE_DEFINED__
@@ -5087,12 +3333,6 @@ EXTERN_C const IID IID_IMessage;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TriggerDetailsID( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Retries( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Retries( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddTrace( 
             /* [in] */ BSTR TraceString) = 0;
         
@@ -5100,11 +3340,11 @@ EXTERN_C const IID IID_IMessage;
             /* [retval][out] */ LONG *Count) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentName( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentSize( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachment( 
@@ -5112,28 +3352,14 @@ EXTERN_C const IID IID_IMessage;
             /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SaveAttachment( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile) = 0;
         
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ClearAttachments( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentID( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachmentBase64( 
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentBase64( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64) = 0;
-        
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FieldCount( 
-            /* [retval][out] */ LONG *Value) = 0;
+            /* [retval][out] */ long *Value) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetFieldNameFromIndex( 
-            /* [in] */ LONG IDX,
+            /* [in] */ long ID,
             /* [retval][out] */ BSTR *Value) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueRequired( 
@@ -5393,14 +3619,6 @@ EXTERN_C const IID IID_IMessage;
             IMessage * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Retries )( 
-            IMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Retries )( 
-            IMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddTrace )( 
             IMessage * This,
             /* [in] */ BSTR TraceString);
@@ -5411,12 +3629,12 @@ EXTERN_C const IID IID_IMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentName )( 
             IMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentSize )( 
             IMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachment )( 
@@ -5426,34 +3644,16 @@ EXTERN_C const IID IID_IMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SaveAttachment )( 
             IMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ClearAttachments )( 
-            IMessage * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentID )( 
-            IMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachmentBase64 )( 
-            IMessage * This,
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentBase64 )( 
-            IMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FieldCount )( 
             IMessage * This,
-            /* [retval][out] */ LONG *Value);
+            /* [retval][out] */ long *Value);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetFieldNameFromIndex )( 
             IMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ long ID,
             /* [retval][out] */ BSTR *Value);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueRequired )( 
@@ -5655,47 +3855,29 @@ EXTERN_C const IID IID_IMessage;
 #define IMessage_get_TriggerDetailsID(This,pVal)	\
     ( (This)->lpVtbl -> get_TriggerDetailsID(This,pVal) ) 
 
-#define IMessage_put_Retries(This,Val)	\
-    ( (This)->lpVtbl -> put_Retries(This,Val) ) 
-
-#define IMessage_get_Retries(This,pVal)	\
-    ( (This)->lpVtbl -> get_Retries(This,pVal) ) 
-
 #define IMessage_AddTrace(This,TraceString)	\
     ( (This)->lpVtbl -> AddTrace(This,TraceString) ) 
 
 #define IMessage_CountAttachments(This,Count)	\
     ( (This)->lpVtbl -> CountAttachments(This,Count) ) 
 
-#define IMessage_GetAttachmentName(This,IDX,Name)	\
-    ( (This)->lpVtbl -> GetAttachmentName(This,IDX,Name) ) 
+#define IMessage_GetAttachmentName(This,ID,Name)	\
+    ( (This)->lpVtbl -> GetAttachmentName(This,ID,Name) ) 
 
-#define IMessage_GetAttachmentSize(This,IDX,Size)	\
-    ( (This)->lpVtbl -> GetAttachmentSize(This,IDX,Size) ) 
+#define IMessage_GetAttachmentSize(This,ID,Size)	\
+    ( (This)->lpVtbl -> GetAttachmentSize(This,ID,Size) ) 
 
 #define IMessage_AddAttachment(This,FileName,Name)	\
     ( (This)->lpVtbl -> AddAttachment(This,FileName,Name) ) 
 
-#define IMessage_SaveAttachment(This,IDX,SaveAsFile)	\
-    ( (This)->lpVtbl -> SaveAttachment(This,IDX,SaveAsFile) ) 
-
-#define IMessage_ClearAttachments(This)	\
-    ( (This)->lpVtbl -> ClearAttachments(This) ) 
-
-#define IMessage_GetAttachmentID(This,IDX,ID)	\
-    ( (This)->lpVtbl -> GetAttachmentID(This,IDX,ID) ) 
-
-#define IMessage_AddAttachmentBase64(This,Base64,Name)	\
-    ( (This)->lpVtbl -> AddAttachmentBase64(This,Base64,Name) ) 
-
-#define IMessage_GetAttachmentBase64(This,IDX,Base64)	\
-    ( (This)->lpVtbl -> GetAttachmentBase64(This,IDX,Base64) ) 
+#define IMessage_SaveAttachment(This,ID,SaveAsFile)	\
+    ( (This)->lpVtbl -> SaveAttachment(This,ID,SaveAsFile) ) 
 
 #define IMessage_get_FieldCount(This,Value)	\
     ( (This)->lpVtbl -> get_FieldCount(This,Value) ) 
 
-#define IMessage_GetFieldNameFromIndex(This,IDX,Value)	\
-    ( (This)->lpVtbl -> GetFieldNameFromIndex(This,IDX,Value) ) 
+#define IMessage_GetFieldNameFromIndex(This,ID,Value)	\
+    ( (This)->lpVtbl -> GetFieldNameFromIndex(This,ID,Value) ) 
 
 #define IMessage_GetValueRequired(This,sField,Value)	\
     ( (This)->lpVtbl -> GetValueRequired(This,sField,Value) ) 
@@ -6002,6 +4184,9 @@ EXTERN_C const IID IID_ISmsMessage;
     ISmsMessage : public IDispatch
     {
     public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetMessageObject( 
             /* [in] */ IMessage *pVal) = 0;
         
@@ -6023,11 +4208,6 @@ EXTERN_C const IID IID_ISmsMessage;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE DeleteTlv( 
             /* [in] */ LONG lTag) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ClearTlvs( void) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
-            /* [retval][out] */ LONG *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DirectionID( 
             /* [in] */ BSTR Val) = 0;
@@ -6155,12 +4335,6 @@ EXTERN_C const IID IID_ISmsMessage;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TriggerDetailsID( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Retries( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Retries( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddTrace( 
             /* [in] */ BSTR TraceString) = 0;
         
@@ -6168,11 +4342,11 @@ EXTERN_C const IID IID_ISmsMessage;
             /* [retval][out] */ LONG *Count) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentName( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentSize( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachment( 
@@ -6180,53 +4354,8 @@ EXTERN_C const IID IID_ISmsMessage;
             /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SaveAttachment( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ClearAttachments( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentID( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachmentBase64( 
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentBase64( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FieldCount( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetFieldNameFromIndex( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueRequired( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueType( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ToAddress( 
             /* [in] */ BSTR Val) = 0;
@@ -6307,12 +4436,6 @@ EXTERN_C const IID IID_ISmsMessage;
             /* [in] */ BSTR Val) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SmppSequenceNumber( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_LanguageLockingShift( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_LanguageSingleShift( 
             /* [in] */ LONG Val) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ToAddress( 
@@ -6396,12 +4519,6 @@ EXTERN_C const IID IID_ISmsMessage;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SmppSequenceNumber( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LanguageLockingShift( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LanguageSingleShift( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
     };
     
     
@@ -6460,6 +4577,10 @@ EXTERN_C const IID IID_ISmsMessage;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
+            ISmsMessage * This,
+            /* [retval][out] */ LONG *pVal);
+        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetMessageObject )( 
             ISmsMessage * This,
             /* [in] */ IMessage *pVal);
@@ -6488,13 +4609,6 @@ EXTERN_C const IID IID_ISmsMessage;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DeleteTlv )( 
             ISmsMessage * This,
             /* [in] */ LONG lTag);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ClearTlvs )( 
-            ISmsMessage * This);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
-            ISmsMessage * This,
-            /* [retval][out] */ LONG *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DirectionID )( 
             ISmsMessage * This,
@@ -6664,14 +4778,6 @@ EXTERN_C const IID IID_ISmsMessage;
             ISmsMessage * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Retries )( 
-            ISmsMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Retries )( 
-            ISmsMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddTrace )( 
             ISmsMessage * This,
             /* [in] */ BSTR TraceString);
@@ -6682,12 +4788,12 @@ EXTERN_C const IID IID_ISmsMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentName )( 
             ISmsMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentSize )( 
             ISmsMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachment )( 
@@ -6697,65 +4803,8 @@ EXTERN_C const IID IID_ISmsMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SaveAttachment )( 
             ISmsMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ClearAttachments )( 
-            ISmsMessage * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentID )( 
-            ISmsMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachmentBase64 )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentBase64 )( 
-            ISmsMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FieldCount )( 
-            ISmsMessage * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetFieldNameFromIndex )( 
-            ISmsMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueRequired )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueType )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValue )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetValue )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetPasswordValue )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetPasswordValue )( 
-            ISmsMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ToAddress )( 
             ISmsMessage * This,
@@ -6862,14 +4911,6 @@ EXTERN_C const IID IID_ISmsMessage;
             /* [in] */ BSTR Val);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SmppSequenceNumber )( 
-            ISmsMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_LanguageLockingShift )( 
-            ISmsMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_LanguageSingleShift )( 
             ISmsMessage * This,
             /* [in] */ LONG Val);
         
@@ -6981,14 +5022,6 @@ EXTERN_C const IID IID_ISmsMessage;
             ISmsMessage * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LanguageLockingShift )( 
-            ISmsMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LanguageSingleShift )( 
-            ISmsMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
         END_INTERFACE
     } ISmsMessageVtbl;
 
@@ -7025,6 +5058,9 @@ EXTERN_C const IID IID_ISmsMessage;
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
+#define ISmsMessage_get_LastError(This,pVal)	\
+    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
+
 #define ISmsMessage_SetMessageObject(This,pVal)	\
     ( (This)->lpVtbl -> SetMessageObject(This,pVal) ) 
 
@@ -7045,12 +5081,6 @@ EXTERN_C const IID IID_ISmsMessage;
 
 #define ISmsMessage_DeleteTlv(This,lTag)	\
     ( (This)->lpVtbl -> DeleteTlv(This,lTag) ) 
-
-#define ISmsMessage_ClearTlvs(This)	\
-    ( (This)->lpVtbl -> ClearTlvs(This) ) 
-
-#define ISmsMessage_get_LastError(This,pVal)	\
-    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
 
 #define ISmsMessage_put_DirectionID(This,Val)	\
     ( (This)->lpVtbl -> put_DirectionID(This,Val) ) 
@@ -7178,65 +5208,23 @@ EXTERN_C const IID IID_ISmsMessage;
 #define ISmsMessage_get_TriggerDetailsID(This,pVal)	\
     ( (This)->lpVtbl -> get_TriggerDetailsID(This,pVal) ) 
 
-#define ISmsMessage_put_Retries(This,Val)	\
-    ( (This)->lpVtbl -> put_Retries(This,Val) ) 
-
-#define ISmsMessage_get_Retries(This,pVal)	\
-    ( (This)->lpVtbl -> get_Retries(This,pVal) ) 
-
 #define ISmsMessage_AddTrace(This,TraceString)	\
     ( (This)->lpVtbl -> AddTrace(This,TraceString) ) 
 
 #define ISmsMessage_CountAttachments(This,Count)	\
     ( (This)->lpVtbl -> CountAttachments(This,Count) ) 
 
-#define ISmsMessage_GetAttachmentName(This,IDX,Name)	\
-    ( (This)->lpVtbl -> GetAttachmentName(This,IDX,Name) ) 
+#define ISmsMessage_GetAttachmentName(This,ID,Name)	\
+    ( (This)->lpVtbl -> GetAttachmentName(This,ID,Name) ) 
 
-#define ISmsMessage_GetAttachmentSize(This,IDX,Size)	\
-    ( (This)->lpVtbl -> GetAttachmentSize(This,IDX,Size) ) 
+#define ISmsMessage_GetAttachmentSize(This,ID,Size)	\
+    ( (This)->lpVtbl -> GetAttachmentSize(This,ID,Size) ) 
 
 #define ISmsMessage_AddAttachment(This,FileName,Name)	\
     ( (This)->lpVtbl -> AddAttachment(This,FileName,Name) ) 
 
-#define ISmsMessage_SaveAttachment(This,IDX,SaveAsFile)	\
-    ( (This)->lpVtbl -> SaveAttachment(This,IDX,SaveAsFile) ) 
-
-#define ISmsMessage_ClearAttachments(This)	\
-    ( (This)->lpVtbl -> ClearAttachments(This) ) 
-
-#define ISmsMessage_GetAttachmentID(This,IDX,ID)	\
-    ( (This)->lpVtbl -> GetAttachmentID(This,IDX,ID) ) 
-
-#define ISmsMessage_AddAttachmentBase64(This,Base64,Name)	\
-    ( (This)->lpVtbl -> AddAttachmentBase64(This,Base64,Name) ) 
-
-#define ISmsMessage_GetAttachmentBase64(This,IDX,Base64)	\
-    ( (This)->lpVtbl -> GetAttachmentBase64(This,IDX,Base64) ) 
-
-#define ISmsMessage_get_FieldCount(This,Value)	\
-    ( (This)->lpVtbl -> get_FieldCount(This,Value) ) 
-
-#define ISmsMessage_GetFieldNameFromIndex(This,IDX,Value)	\
-    ( (This)->lpVtbl -> GetFieldNameFromIndex(This,IDX,Value) ) 
-
-#define ISmsMessage_GetValueRequired(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueRequired(This,sField,Value) ) 
-
-#define ISmsMessage_GetValueType(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueType(This,sField,Value) ) 
-
-#define ISmsMessage_GetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetValue(This,sField,pVal) ) 
-
-#define ISmsMessage_SetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> SetValue(This,sField,pVal) ) 
-
-#define ISmsMessage_GetPasswordValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetPasswordValue(This,sField,pVal) ) 
-
-#define ISmsMessage_SetPasswordValue(This,sField,Val)	\
-    ( (This)->lpVtbl -> SetPasswordValue(This,sField,Val) ) 
+#define ISmsMessage_SaveAttachment(This,ID,SaveAsFile)	\
+    ( (This)->lpVtbl -> SaveAttachment(This,ID,SaveAsFile) ) 
 
 #define ISmsMessage_put_ToAddress(This,Val)	\
     ( (This)->lpVtbl -> put_ToAddress(This,Val) ) 
@@ -7319,12 +5307,6 @@ EXTERN_C const IID IID_ISmsMessage;
 #define ISmsMessage_put_SmppSequenceNumber(This,Val)	\
     ( (This)->lpVtbl -> put_SmppSequenceNumber(This,Val) ) 
 
-#define ISmsMessage_put_LanguageLockingShift(This,Val)	\
-    ( (This)->lpVtbl -> put_LanguageLockingShift(This,Val) ) 
-
-#define ISmsMessage_put_LanguageSingleShift(This,Val)	\
-    ( (This)->lpVtbl -> put_LanguageSingleShift(This,Val) ) 
-
 #define ISmsMessage_get_ToAddress(This,pVal)	\
     ( (This)->lpVtbl -> get_ToAddress(This,pVal) ) 
 
@@ -7406,113 +5388,11 @@ EXTERN_C const IID IID_ISmsMessage;
 #define ISmsMessage_get_SmppSequenceNumber(This,pVal)	\
     ( (This)->lpVtbl -> get_SmppSequenceNumber(This,pVal) ) 
 
-#define ISmsMessage_get_LanguageLockingShift(This,pVal)	\
-    ( (This)->lpVtbl -> get_LanguageLockingShift(This,pVal) ) 
-
-#define ISmsMessage_get_LanguageSingleShift(This,pVal)	\
-    ( (This)->lpVtbl -> get_LanguageSingleShift(This,pVal) ) 
-
 #endif /* COBJMACROS */
 
 
 #endif 	/* C style interface */
 
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_SmppTlvs_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ BSTR *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_SmppTlvs_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_Body_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ BSTR *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_Body_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_Reference_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ BSTR *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_Reference_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_SmppStatusCode_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ LONG *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_SmppStatusCode_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_SmppClient_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ BSTR *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_SmppClient_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_SmppSequenceNumber_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ LONG *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_SmppSequenceNumber_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_LanguageLockingShift_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ LONG *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_LanguageLockingShift_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ISmsMessage_get_LanguageSingleShift_Proxy( 
-    ISmsMessage * This,
-    /* [retval][out] */ LONG *pVal);
-
-
-void __RPC_STUB ISmsMessage_get_LanguageSingleShift_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
 
 
 
@@ -7534,6 +5414,9 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
     ISmppServerBindMessage : public IDispatch
     {
     public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetMessageObject( 
             /* [in] */ IMessage *pVal) = 0;
         
@@ -7555,9 +5438,6 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE DeleteTlv( 
             /* [in] */ LONG lTag) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
-            /* [retval][out] */ LONG *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DirectionID( 
             /* [in] */ BSTR Val) = 0;
@@ -7685,12 +5565,6 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TriggerDetailsID( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Retries( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Retries( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddTrace( 
             /* [in] */ BSTR TraceString) = 0;
         
@@ -7698,11 +5572,11 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
             /* [retval][out] */ LONG *Count) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentName( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentSize( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachment( 
@@ -7710,53 +5584,8 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
             /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SaveAttachment( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ClearAttachments( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentID( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachmentBase64( 
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentBase64( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FieldCount( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetFieldNameFromIndex( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueRequired( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueType( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_BindType( 
             /* [in] */ LONG Val) = 0;
@@ -7882,6 +5711,10 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
+            ISmppServerBindMessage * This,
+            /* [retval][out] */ LONG *pVal);
+        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetMessageObject )( 
             ISmppServerBindMessage * This,
             /* [in] */ IMessage *pVal);
@@ -7910,10 +5743,6 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DeleteTlv )( 
             ISmppServerBindMessage * This,
             /* [in] */ LONG lTag);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
-            ISmppServerBindMessage * This,
-            /* [retval][out] */ LONG *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DirectionID )( 
             ISmppServerBindMessage * This,
@@ -8083,14 +5912,6 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
             ISmppServerBindMessage * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Retries )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Retries )( 
-            ISmppServerBindMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddTrace )( 
             ISmppServerBindMessage * This,
             /* [in] */ BSTR TraceString);
@@ -8101,12 +5922,12 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentName )( 
             ISmppServerBindMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentSize )( 
             ISmppServerBindMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachment )( 
@@ -8116,65 +5937,8 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SaveAttachment )( 
             ISmppServerBindMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ClearAttachments )( 
-            ISmppServerBindMessage * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentID )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachmentBase64 )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentBase64 )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FieldCount )( 
-            ISmppServerBindMessage * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetFieldNameFromIndex )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueRequired )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueType )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValue )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetValue )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetPasswordValue )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetPasswordValue )( 
-            ISmppServerBindMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BindType )( 
             ISmppServerBindMessage * This,
@@ -8300,6 +6064,9 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
+#define ISmppServerBindMessage_get_LastError(This,pVal)	\
+    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
+
 #define ISmppServerBindMessage_SetMessageObject(This,pVal)	\
     ( (This)->lpVtbl -> SetMessageObject(This,pVal) ) 
 
@@ -8320,9 +6087,6 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
 
 #define ISmppServerBindMessage_DeleteTlv(This,lTag)	\
     ( (This)->lpVtbl -> DeleteTlv(This,lTag) ) 
-
-#define ISmppServerBindMessage_get_LastError(This,pVal)	\
-    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
 
 #define ISmppServerBindMessage_put_DirectionID(This,Val)	\
     ( (This)->lpVtbl -> put_DirectionID(This,Val) ) 
@@ -8450,65 +6214,23 @@ EXTERN_C const IID IID_ISmppServerBindMessage;
 #define ISmppServerBindMessage_get_TriggerDetailsID(This,pVal)	\
     ( (This)->lpVtbl -> get_TriggerDetailsID(This,pVal) ) 
 
-#define ISmppServerBindMessage_put_Retries(This,Val)	\
-    ( (This)->lpVtbl -> put_Retries(This,Val) ) 
-
-#define ISmppServerBindMessage_get_Retries(This,pVal)	\
-    ( (This)->lpVtbl -> get_Retries(This,pVal) ) 
-
 #define ISmppServerBindMessage_AddTrace(This,TraceString)	\
     ( (This)->lpVtbl -> AddTrace(This,TraceString) ) 
 
 #define ISmppServerBindMessage_CountAttachments(This,Count)	\
     ( (This)->lpVtbl -> CountAttachments(This,Count) ) 
 
-#define ISmppServerBindMessage_GetAttachmentName(This,IDX,Name)	\
-    ( (This)->lpVtbl -> GetAttachmentName(This,IDX,Name) ) 
+#define ISmppServerBindMessage_GetAttachmentName(This,ID,Name)	\
+    ( (This)->lpVtbl -> GetAttachmentName(This,ID,Name) ) 
 
-#define ISmppServerBindMessage_GetAttachmentSize(This,IDX,Size)	\
-    ( (This)->lpVtbl -> GetAttachmentSize(This,IDX,Size) ) 
+#define ISmppServerBindMessage_GetAttachmentSize(This,ID,Size)	\
+    ( (This)->lpVtbl -> GetAttachmentSize(This,ID,Size) ) 
 
 #define ISmppServerBindMessage_AddAttachment(This,FileName,Name)	\
     ( (This)->lpVtbl -> AddAttachment(This,FileName,Name) ) 
 
-#define ISmppServerBindMessage_SaveAttachment(This,IDX,SaveAsFile)	\
-    ( (This)->lpVtbl -> SaveAttachment(This,IDX,SaveAsFile) ) 
-
-#define ISmppServerBindMessage_ClearAttachments(This)	\
-    ( (This)->lpVtbl -> ClearAttachments(This) ) 
-
-#define ISmppServerBindMessage_GetAttachmentID(This,IDX,ID)	\
-    ( (This)->lpVtbl -> GetAttachmentID(This,IDX,ID) ) 
-
-#define ISmppServerBindMessage_AddAttachmentBase64(This,Base64,Name)	\
-    ( (This)->lpVtbl -> AddAttachmentBase64(This,Base64,Name) ) 
-
-#define ISmppServerBindMessage_GetAttachmentBase64(This,IDX,Base64)	\
-    ( (This)->lpVtbl -> GetAttachmentBase64(This,IDX,Base64) ) 
-
-#define ISmppServerBindMessage_get_FieldCount(This,Value)	\
-    ( (This)->lpVtbl -> get_FieldCount(This,Value) ) 
-
-#define ISmppServerBindMessage_GetFieldNameFromIndex(This,IDX,Value)	\
-    ( (This)->lpVtbl -> GetFieldNameFromIndex(This,IDX,Value) ) 
-
-#define ISmppServerBindMessage_GetValueRequired(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueRequired(This,sField,Value) ) 
-
-#define ISmppServerBindMessage_GetValueType(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueType(This,sField,Value) ) 
-
-#define ISmppServerBindMessage_GetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetValue(This,sField,pVal) ) 
-
-#define ISmppServerBindMessage_SetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> SetValue(This,sField,pVal) ) 
-
-#define ISmppServerBindMessage_GetPasswordValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetPasswordValue(This,sField,pVal) ) 
-
-#define ISmppServerBindMessage_SetPasswordValue(This,sField,Val)	\
-    ( (This)->lpVtbl -> SetPasswordValue(This,sField,Val) ) 
+#define ISmppServerBindMessage_SaveAttachment(This,ID,SaveAsFile)	\
+    ( (This)->lpVtbl -> SaveAttachment(This,ID,SaveAsFile) ) 
 
 #define ISmppServerBindMessage_put_BindType(This,Val)	\
     ( (This)->lpVtbl -> put_BindType(This,Val) ) 
@@ -8602,14 +6324,14 @@ EXTERN_C const IID IID_IEmailMessage;
     IEmailMessage : public IDispatch
     {
     public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetMessageObject( 
             /* [in] */ IMessage *pVal) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetMessageObject( 
             /* [retval][out] */ IMessage **ppVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
-            /* [retval][out] */ LONG *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DirectionID( 
             /* [in] */ BSTR Val) = 0;
@@ -8737,12 +6459,6 @@ EXTERN_C const IID IID_IEmailMessage;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TriggerDetailsID( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Retries( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Retries( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddTrace( 
             /* [in] */ BSTR TraceString) = 0;
         
@@ -8750,11 +6466,11 @@ EXTERN_C const IID IID_IEmailMessage;
             /* [retval][out] */ LONG *Count) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentName( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentSize( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachment( 
@@ -8762,53 +6478,8 @@ EXTERN_C const IID IID_IEmailMessage;
             /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SaveAttachment( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ClearAttachments( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentID( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachmentBase64( 
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentBase64( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FieldCount( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetFieldNameFromIndex( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueRequired( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueType( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImapUID( 
             /* [in] */ LONG Val) = 0;
@@ -8958,6 +6629,10 @@ EXTERN_C const IID IID_IEmailMessage;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
+            IEmailMessage * This,
+            /* [retval][out] */ LONG *pVal);
+        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetMessageObject )( 
             IEmailMessage * This,
             /* [in] */ IMessage *pVal);
@@ -8965,10 +6640,6 @@ EXTERN_C const IID IID_IEmailMessage;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetMessageObject )( 
             IEmailMessage * This,
             /* [retval][out] */ IMessage **ppVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
-            IEmailMessage * This,
-            /* [retval][out] */ LONG *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DirectionID )( 
             IEmailMessage * This,
@@ -9138,14 +6809,6 @@ EXTERN_C const IID IID_IEmailMessage;
             IEmailMessage * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Retries )( 
-            IEmailMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Retries )( 
-            IEmailMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddTrace )( 
             IEmailMessage * This,
             /* [in] */ BSTR TraceString);
@@ -9156,12 +6819,12 @@ EXTERN_C const IID IID_IEmailMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentName )( 
             IEmailMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentSize )( 
             IEmailMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachment )( 
@@ -9171,65 +6834,8 @@ EXTERN_C const IID IID_IEmailMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SaveAttachment )( 
             IEmailMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ClearAttachments )( 
-            IEmailMessage * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentID )( 
-            IEmailMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachmentBase64 )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentBase64 )( 
-            IEmailMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FieldCount )( 
-            IEmailMessage * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetFieldNameFromIndex )( 
-            IEmailMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueRequired )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueType )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValue )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetValue )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetPasswordValue )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetPasswordValue )( 
-            IEmailMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImapUID )( 
             IEmailMessage * This,
@@ -9387,14 +6993,14 @@ EXTERN_C const IID IID_IEmailMessage;
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
+#define IEmailMessage_get_LastError(This,pVal)	\
+    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
+
 #define IEmailMessage_SetMessageObject(This,pVal)	\
     ( (This)->lpVtbl -> SetMessageObject(This,pVal) ) 
 
 #define IEmailMessage_GetMessageObject(This,ppVal)	\
     ( (This)->lpVtbl -> GetMessageObject(This,ppVal) ) 
-
-#define IEmailMessage_get_LastError(This,pVal)	\
-    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
 
 #define IEmailMessage_put_DirectionID(This,Val)	\
     ( (This)->lpVtbl -> put_DirectionID(This,Val) ) 
@@ -9522,65 +7128,23 @@ EXTERN_C const IID IID_IEmailMessage;
 #define IEmailMessage_get_TriggerDetailsID(This,pVal)	\
     ( (This)->lpVtbl -> get_TriggerDetailsID(This,pVal) ) 
 
-#define IEmailMessage_put_Retries(This,Val)	\
-    ( (This)->lpVtbl -> put_Retries(This,Val) ) 
-
-#define IEmailMessage_get_Retries(This,pVal)	\
-    ( (This)->lpVtbl -> get_Retries(This,pVal) ) 
-
 #define IEmailMessage_AddTrace(This,TraceString)	\
     ( (This)->lpVtbl -> AddTrace(This,TraceString) ) 
 
 #define IEmailMessage_CountAttachments(This,Count)	\
     ( (This)->lpVtbl -> CountAttachments(This,Count) ) 
 
-#define IEmailMessage_GetAttachmentName(This,IDX,Name)	\
-    ( (This)->lpVtbl -> GetAttachmentName(This,IDX,Name) ) 
+#define IEmailMessage_GetAttachmentName(This,ID,Name)	\
+    ( (This)->lpVtbl -> GetAttachmentName(This,ID,Name) ) 
 
-#define IEmailMessage_GetAttachmentSize(This,IDX,Size)	\
-    ( (This)->lpVtbl -> GetAttachmentSize(This,IDX,Size) ) 
+#define IEmailMessage_GetAttachmentSize(This,ID,Size)	\
+    ( (This)->lpVtbl -> GetAttachmentSize(This,ID,Size) ) 
 
 #define IEmailMessage_AddAttachment(This,FileName,Name)	\
     ( (This)->lpVtbl -> AddAttachment(This,FileName,Name) ) 
 
-#define IEmailMessage_SaveAttachment(This,IDX,SaveAsFile)	\
-    ( (This)->lpVtbl -> SaveAttachment(This,IDX,SaveAsFile) ) 
-
-#define IEmailMessage_ClearAttachments(This)	\
-    ( (This)->lpVtbl -> ClearAttachments(This) ) 
-
-#define IEmailMessage_GetAttachmentID(This,IDX,ID)	\
-    ( (This)->lpVtbl -> GetAttachmentID(This,IDX,ID) ) 
-
-#define IEmailMessage_AddAttachmentBase64(This,Base64,Name)	\
-    ( (This)->lpVtbl -> AddAttachmentBase64(This,Base64,Name) ) 
-
-#define IEmailMessage_GetAttachmentBase64(This,IDX,Base64)	\
-    ( (This)->lpVtbl -> GetAttachmentBase64(This,IDX,Base64) ) 
-
-#define IEmailMessage_get_FieldCount(This,Value)	\
-    ( (This)->lpVtbl -> get_FieldCount(This,Value) ) 
-
-#define IEmailMessage_GetFieldNameFromIndex(This,IDX,Value)	\
-    ( (This)->lpVtbl -> GetFieldNameFromIndex(This,IDX,Value) ) 
-
-#define IEmailMessage_GetValueRequired(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueRequired(This,sField,Value) ) 
-
-#define IEmailMessage_GetValueType(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueType(This,sField,Value) ) 
-
-#define IEmailMessage_GetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetValue(This,sField,pVal) ) 
-
-#define IEmailMessage_SetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> SetValue(This,sField,pVal) ) 
-
-#define IEmailMessage_GetPasswordValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetPasswordValue(This,sField,pVal) ) 
-
-#define IEmailMessage_SetPasswordValue(This,sField,Val)	\
-    ( (This)->lpVtbl -> SetPasswordValue(This,sField,Val) ) 
+#define IEmailMessage_SaveAttachment(This,ID,SaveAsFile)	\
+    ( (This)->lpVtbl -> SaveAttachment(This,ID,SaveAsFile) ) 
 
 #define IEmailMessage_put_ImapUID(This,Val)	\
     ( (This)->lpVtbl -> put_ImapUID(This,Val) ) 
@@ -9698,14 +7262,14 @@ EXTERN_C const IID IID_IFileMessage;
     IFileMessage : public IDispatch
     {
     public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetMessageObject( 
             /* [in] */ IMessage *pVal) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetMessageObject( 
             /* [retval][out] */ IMessage **ppVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastError( 
-            /* [retval][out] */ LONG *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DirectionID( 
             /* [in] */ BSTR Val) = 0;
@@ -9833,12 +7397,6 @@ EXTERN_C const IID IID_IFileMessage;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TriggerDetailsID( 
             /* [retval][out] */ LONG *pVal) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Retries( 
-            /* [in] */ LONG Val) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Retries( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddTrace( 
             /* [in] */ BSTR TraceString) = 0;
         
@@ -9846,11 +7404,11 @@ EXTERN_C const IID IID_IFileMessage;
             /* [retval][out] */ LONG *Count) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentName( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentSize( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachment( 
@@ -9858,53 +7416,8 @@ EXTERN_C const IID IID_IFileMessage;
             /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SaveAttachment( 
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ClearAttachments( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentID( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddAttachmentBase64( 
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name = (BSTR)L"") = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAttachmentBase64( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_FieldCount( 
-            /* [retval][out] */ LONG *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetFieldNameFromIndex( 
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueRequired( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValueType( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetPasswordValue( 
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Path( 
             /* [in] */ BSTR Val) = 0;
@@ -9976,6 +7489,10 @@ EXTERN_C const IID IID_IFileMessage;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
+            IFileMessage * This,
+            /* [retval][out] */ LONG *pVal);
+        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetMessageObject )( 
             IFileMessage * This,
             /* [in] */ IMessage *pVal);
@@ -9983,10 +7500,6 @@ EXTERN_C const IID IID_IFileMessage;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetMessageObject )( 
             IFileMessage * This,
             /* [retval][out] */ IMessage **ppVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastError )( 
-            IFileMessage * This,
-            /* [retval][out] */ LONG *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DirectionID )( 
             IFileMessage * This,
@@ -10156,14 +7669,6 @@ EXTERN_C const IID IID_IFileMessage;
             IFileMessage * This,
             /* [retval][out] */ LONG *pVal);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Retries )( 
-            IFileMessage * This,
-            /* [in] */ LONG Val);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Retries )( 
-            IFileMessage * This,
-            /* [retval][out] */ LONG *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddTrace )( 
             IFileMessage * This,
             /* [in] */ BSTR TraceString);
@@ -10174,12 +7679,12 @@ EXTERN_C const IID IID_IFileMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentName )( 
             IFileMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ BSTR *Name);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentSize )( 
             IFileMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [retval][out] */ LONG *Size);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachment )( 
@@ -10189,65 +7694,8 @@ EXTERN_C const IID IID_IFileMessage;
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SaveAttachment )( 
             IFileMessage * This,
-            /* [in] */ LONG IDX,
+            /* [in] */ LONG ID,
             /* [in] */ BSTR SaveAsFile);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ClearAttachments )( 
-            IFileMessage * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentID )( 
-            IFileMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ LONG *ID);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddAttachmentBase64 )( 
-            IFileMessage * This,
-            /* [in] */ BSTR Base64,
-            /* [defaultvalue][in] */ BSTR Name);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAttachmentBase64 )( 
-            IFileMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Base64);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FieldCount )( 
-            IFileMessage * This,
-            /* [retval][out] */ LONG *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetFieldNameFromIndex )( 
-            IFileMessage * This,
-            /* [in] */ LONG IDX,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueRequired )( 
-            IFileMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValueType )( 
-            IFileMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetValue )( 
-            IFileMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetValue )( 
-            IFileMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ VARIANT *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetPasswordValue )( 
-            IFileMessage * This,
-            /* [in] */ BSTR sField,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetPasswordValue )( 
-            IFileMessage * This,
-            /* [in] */ BSTR sField,
-            /* [in] */ BSTR Val);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Path )( 
             IFileMessage * This,
@@ -10301,14 +7749,14 @@ EXTERN_C const IID IID_IFileMessage;
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
+#define IFileMessage_get_LastError(This,pVal)	\
+    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
+
 #define IFileMessage_SetMessageObject(This,pVal)	\
     ( (This)->lpVtbl -> SetMessageObject(This,pVal) ) 
 
 #define IFileMessage_GetMessageObject(This,ppVal)	\
     ( (This)->lpVtbl -> GetMessageObject(This,ppVal) ) 
-
-#define IFileMessage_get_LastError(This,pVal)	\
-    ( (This)->lpVtbl -> get_LastError(This,pVal) ) 
 
 #define IFileMessage_put_DirectionID(This,Val)	\
     ( (This)->lpVtbl -> put_DirectionID(This,Val) ) 
@@ -10436,65 +7884,23 @@ EXTERN_C const IID IID_IFileMessage;
 #define IFileMessage_get_TriggerDetailsID(This,pVal)	\
     ( (This)->lpVtbl -> get_TriggerDetailsID(This,pVal) ) 
 
-#define IFileMessage_put_Retries(This,Val)	\
-    ( (This)->lpVtbl -> put_Retries(This,Val) ) 
-
-#define IFileMessage_get_Retries(This,pVal)	\
-    ( (This)->lpVtbl -> get_Retries(This,pVal) ) 
-
 #define IFileMessage_AddTrace(This,TraceString)	\
     ( (This)->lpVtbl -> AddTrace(This,TraceString) ) 
 
 #define IFileMessage_CountAttachments(This,Count)	\
     ( (This)->lpVtbl -> CountAttachments(This,Count) ) 
 
-#define IFileMessage_GetAttachmentName(This,IDX,Name)	\
-    ( (This)->lpVtbl -> GetAttachmentName(This,IDX,Name) ) 
+#define IFileMessage_GetAttachmentName(This,ID,Name)	\
+    ( (This)->lpVtbl -> GetAttachmentName(This,ID,Name) ) 
 
-#define IFileMessage_GetAttachmentSize(This,IDX,Size)	\
-    ( (This)->lpVtbl -> GetAttachmentSize(This,IDX,Size) ) 
+#define IFileMessage_GetAttachmentSize(This,ID,Size)	\
+    ( (This)->lpVtbl -> GetAttachmentSize(This,ID,Size) ) 
 
 #define IFileMessage_AddAttachment(This,FileName,Name)	\
     ( (This)->lpVtbl -> AddAttachment(This,FileName,Name) ) 
 
-#define IFileMessage_SaveAttachment(This,IDX,SaveAsFile)	\
-    ( (This)->lpVtbl -> SaveAttachment(This,IDX,SaveAsFile) ) 
-
-#define IFileMessage_ClearAttachments(This)	\
-    ( (This)->lpVtbl -> ClearAttachments(This) ) 
-
-#define IFileMessage_GetAttachmentID(This,IDX,ID)	\
-    ( (This)->lpVtbl -> GetAttachmentID(This,IDX,ID) ) 
-
-#define IFileMessage_AddAttachmentBase64(This,Base64,Name)	\
-    ( (This)->lpVtbl -> AddAttachmentBase64(This,Base64,Name) ) 
-
-#define IFileMessage_GetAttachmentBase64(This,IDX,Base64)	\
-    ( (This)->lpVtbl -> GetAttachmentBase64(This,IDX,Base64) ) 
-
-#define IFileMessage_get_FieldCount(This,Value)	\
-    ( (This)->lpVtbl -> get_FieldCount(This,Value) ) 
-
-#define IFileMessage_GetFieldNameFromIndex(This,IDX,Value)	\
-    ( (This)->lpVtbl -> GetFieldNameFromIndex(This,IDX,Value) ) 
-
-#define IFileMessage_GetValueRequired(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueRequired(This,sField,Value) ) 
-
-#define IFileMessage_GetValueType(This,sField,Value)	\
-    ( (This)->lpVtbl -> GetValueType(This,sField,Value) ) 
-
-#define IFileMessage_GetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetValue(This,sField,pVal) ) 
-
-#define IFileMessage_SetValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> SetValue(This,sField,pVal) ) 
-
-#define IFileMessage_GetPasswordValue(This,sField,pVal)	\
-    ( (This)->lpVtbl -> GetPasswordValue(This,sField,pVal) ) 
-
-#define IFileMessage_SetPasswordValue(This,sField,Val)	\
-    ( (This)->lpVtbl -> SetPasswordValue(This,sField,Val) ) 
+#define IFileMessage_SaveAttachment(This,ID,SaveAsFile)	\
+    ( (This)->lpVtbl -> SaveAttachment(This,ID,SaveAsFile) ) 
 
 #define IFileMessage_put_Path(This,Val)	\
     ( (This)->lpVtbl -> put_Path(This,Val) ) 
@@ -10629,22 +8035,6 @@ EXTERN_C const IID IID_IMessageDB;
             /* [retval][out] */ LONG *pNrArchived) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveReport( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE DeleteMessages( 
-            /* [in] */ DATE dtBefore,
-            /* [in] */ LONG lMaxNrToDelete,
-            /* [retval][out] */ LONG *pNrArchived) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DeleteReport( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ArchiveClean( 
-            /* [in] */ DATE dtBefore,
-            /* [in] */ LONG lMaxNrToClean,
-            /* [retval][out] */ LONG *pNrCleaned) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveCleanReport( 
             /* [retval][out] */ BSTR *pVal) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetStatusDescription( 
@@ -10846,26 +8236,6 @@ EXTERN_C const IID IID_IMessageDB;
             IMessageDB * This,
             /* [retval][out] */ BSTR *pVal);
         
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DeleteMessages )( 
-            IMessageDB * This,
-            /* [in] */ DATE dtBefore,
-            /* [in] */ LONG lMaxNrToDelete,
-            /* [retval][out] */ LONG *pNrArchived);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DeleteReport )( 
-            IMessageDB * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ArchiveClean )( 
-            IMessageDB * This,
-            /* [in] */ DATE dtBefore,
-            /* [in] */ LONG lMaxNrToClean,
-            /* [retval][out] */ LONG *pNrCleaned);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ArchiveCleanReport )( 
-            IMessageDB * This,
-            /* [retval][out] */ BSTR *pVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetStatusDescription )( 
             IMessageDB * This,
             /* [in] */ BSTR Value,
@@ -11006,18 +8376,6 @@ EXTERN_C const IID IID_IMessageDB;
 #define IMessageDB_get_ArchiveReport(This,pVal)	\
     ( (This)->lpVtbl -> get_ArchiveReport(This,pVal) ) 
 
-#define IMessageDB_DeleteMessages(This,dtBefore,lMaxNrToDelete,pNrArchived)	\
-    ( (This)->lpVtbl -> DeleteMessages(This,dtBefore,lMaxNrToDelete,pNrArchived) ) 
-
-#define IMessageDB_get_DeleteReport(This,pVal)	\
-    ( (This)->lpVtbl -> get_DeleteReport(This,pVal) ) 
-
-#define IMessageDB_ArchiveClean(This,dtBefore,lMaxNrToClean,pNrCleaned)	\
-    ( (This)->lpVtbl -> ArchiveClean(This,dtBefore,lMaxNrToClean,pNrCleaned) ) 
-
-#define IMessageDB_get_ArchiveCleanReport(This,pVal)	\
-    ( (This)->lpVtbl -> get_ArchiveCleanReport(This,pVal) ) 
-
 #define IMessageDB_GetStatusDescription(This,Value,pVal)	\
     ( (This)->lpVtbl -> GetStatusDescription(This,Value,pVal) ) 
 
@@ -11142,18 +8500,6 @@ EXTERN_C const IID IID_ITrigger;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_FolderID( 
             /* [in] */ LONG Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Final( 
-            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Final( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_IncludeFiles( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_IncludeFiles( 
-            /* [in] */ BSTR Value) = 0;
         
     };
     
@@ -11329,22 +8675,6 @@ EXTERN_C const IID IID_ITrigger;
             ITrigger * This,
             /* [in] */ LONG Value);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Final )( 
-            ITrigger * This,
-            /* [retval][out] */ VARIANT_BOOL *Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Final )( 
-            ITrigger * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_IncludeFiles )( 
-            ITrigger * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_IncludeFiles )( 
-            ITrigger * This,
-            /* [in] */ BSTR Value);
-        
         END_INTERFACE
     } ITriggerVtbl;
 
@@ -11467,18 +8797,6 @@ EXTERN_C const IID IID_ITrigger;
 
 #define ITrigger_put_FolderID(This,Value)	\
     ( (This)->lpVtbl -> put_FolderID(This,Value) ) 
-
-#define ITrigger_get_Final(This,Value)	\
-    ( (This)->lpVtbl -> get_Final(This,Value) ) 
-
-#define ITrigger_put_Final(This,Value)	\
-    ( (This)->lpVtbl -> put_Final(This,Value) ) 
-
-#define ITrigger_get_IncludeFiles(This,Value)	\
-    ( (This)->lpVtbl -> get_IncludeFiles(This,Value) ) 
-
-#define ITrigger_put_IncludeFiles(This,Value)	\
-    ( (This)->lpVtbl -> put_IncludeFiles(This,Value) ) 
 
 #endif /* COBJMACROS */
 
@@ -12724,23 +10042,11 @@ EXTERN_C const IID IID_IOptions;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LicenseActivation( 
             /* [retval][out] */ BSTR *Value) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveAction( 
-            /* [retval][out] */ long *Value) = 0;
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveEnabled( 
+            /* [retval][out] */ VARIANT_BOOL *Value) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ArchiveAction( 
-            /* [in] */ long Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveCleanAction( 
-            /* [retval][out] */ long *Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ArchiveCleanAction( 
-            /* [in] */ long Value) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveCleanDays( 
-            /* [retval][out] */ long *Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ArchiveCleanDays( 
-            /* [in] */ long Value) = 0;
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ArchiveEnabled( 
+            /* [in] */ VARIANT_BOOL Value) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ArchiveDays( 
             /* [retval][out] */ long *Value) = 0;
@@ -12844,36 +10150,6 @@ EXTERN_C const IID IID_IOptions;
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MaxTriggerQueueSize( 
             /* [in] */ LONG Value) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_UseProxyServer( 
-            /* [retval][out] */ VARIANT_BOOL *pValue) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ProxyServer( 
-            /* [retval][out] */ BSTR *pValue) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_UseProxyAuthentication( 
-            /* [retval][out] */ VARIANT_BOOL *pValue) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ProxyAccount( 
-            /* [retval][out] */ BSTR *pValue) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ProxyPassword( 
-            /* [retval][out] */ BSTR *pValue) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_UseProxyServer( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ProxyServer( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_UseProxyAuthentication( 
-            /* [in] */ VARIANT_BOOL Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ProxyAccount( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ProxyPassword( 
-            /* [in] */ BSTR Value) = 0;
-        
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_GatewayAccount( 
             /* [retval][out] */ BSTR *pValue) = 0;
         
@@ -12888,18 +10164,6 @@ EXTERN_C const IID IID_IOptions;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetLogDir( 
             /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetAppID( 
-            /* [retval][out] */ BSTR *pValue) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetServiceUser( 
-            /* [retval][out] */ BSTR *pValue) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetServiceName( 
-            /* [retval][out] */ BSTR *pValue) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetProductName( 
-            /* [retval][out] */ BSTR *pValue) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE HasUpdate( 
             /* [retval][out] */ VARIANT_BOOL *pVal) = 0;
@@ -13011,29 +10275,13 @@ EXTERN_C const IID IID_IOptions;
             IOptions * This,
             /* [retval][out] */ BSTR *Value);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ArchiveAction )( 
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ArchiveEnabled )( 
             IOptions * This,
-            /* [retval][out] */ long *Value);
+            /* [retval][out] */ VARIANT_BOOL *Value);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ArchiveAction )( 
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ArchiveEnabled )( 
             IOptions * This,
-            /* [in] */ long Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ArchiveCleanAction )( 
-            IOptions * This,
-            /* [retval][out] */ long *Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ArchiveCleanAction )( 
-            IOptions * This,
-            /* [in] */ long Value);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ArchiveCleanDays )( 
-            IOptions * This,
-            /* [retval][out] */ long *Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ArchiveCleanDays )( 
-            IOptions * This,
-            /* [in] */ long Value);
+            /* [in] */ VARIANT_BOOL Value);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ArchiveDays )( 
             IOptions * This,
@@ -13171,46 +10419,6 @@ EXTERN_C const IID IID_IOptions;
             IOptions * This,
             /* [in] */ LONG Value);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_UseProxyServer )( 
-            IOptions * This,
-            /* [retval][out] */ VARIANT_BOOL *pValue);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProxyServer )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_UseProxyAuthentication )( 
-            IOptions * This,
-            /* [retval][out] */ VARIANT_BOOL *pValue);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProxyAccount )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProxyPassword )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_UseProxyServer )( 
-            IOptions * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ProxyServer )( 
-            IOptions * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_UseProxyAuthentication )( 
-            IOptions * This,
-            /* [in] */ VARIANT_BOOL Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ProxyAccount )( 
-            IOptions * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ProxyPassword )( 
-            IOptions * This,
-            /* [in] */ BSTR Value);
-        
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_GatewayAccount )( 
             IOptions * This,
             /* [retval][out] */ BSTR *pValue);
@@ -13230,22 +10438,6 @@ EXTERN_C const IID IID_IOptions;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetLogDir )( 
             IOptions * This,
             /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetAppID )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetServiceUser )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetServiceName )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetProductName )( 
-            IOptions * This,
-            /* [retval][out] */ BSTR *pValue);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *HasUpdate )( 
             IOptions * This,
@@ -13329,23 +10521,11 @@ EXTERN_C const IID IID_IOptions;
 #define IOptions_get_LicenseActivation(This,Value)	\
     ( (This)->lpVtbl -> get_LicenseActivation(This,Value) ) 
 
-#define IOptions_get_ArchiveAction(This,Value)	\
-    ( (This)->lpVtbl -> get_ArchiveAction(This,Value) ) 
+#define IOptions_get_ArchiveEnabled(This,Value)	\
+    ( (This)->lpVtbl -> get_ArchiveEnabled(This,Value) ) 
 
-#define IOptions_put_ArchiveAction(This,Value)	\
-    ( (This)->lpVtbl -> put_ArchiveAction(This,Value) ) 
-
-#define IOptions_get_ArchiveCleanAction(This,Value)	\
-    ( (This)->lpVtbl -> get_ArchiveCleanAction(This,Value) ) 
-
-#define IOptions_put_ArchiveCleanAction(This,Value)	\
-    ( (This)->lpVtbl -> put_ArchiveCleanAction(This,Value) ) 
-
-#define IOptions_get_ArchiveCleanDays(This,Value)	\
-    ( (This)->lpVtbl -> get_ArchiveCleanDays(This,Value) ) 
-
-#define IOptions_put_ArchiveCleanDays(This,Value)	\
-    ( (This)->lpVtbl -> put_ArchiveCleanDays(This,Value) ) 
+#define IOptions_put_ArchiveEnabled(This,Value)	\
+    ( (This)->lpVtbl -> put_ArchiveEnabled(This,Value) ) 
 
 #define IOptions_get_ArchiveDays(This,Value)	\
     ( (This)->lpVtbl -> get_ArchiveDays(This,Value) ) 
@@ -13449,36 +10629,6 @@ EXTERN_C const IID IID_IOptions;
 #define IOptions_put_MaxTriggerQueueSize(This,Value)	\
     ( (This)->lpVtbl -> put_MaxTriggerQueueSize(This,Value) ) 
 
-#define IOptions_get_UseProxyServer(This,pValue)	\
-    ( (This)->lpVtbl -> get_UseProxyServer(This,pValue) ) 
-
-#define IOptions_get_ProxyServer(This,pValue)	\
-    ( (This)->lpVtbl -> get_ProxyServer(This,pValue) ) 
-
-#define IOptions_get_UseProxyAuthentication(This,pValue)	\
-    ( (This)->lpVtbl -> get_UseProxyAuthentication(This,pValue) ) 
-
-#define IOptions_get_ProxyAccount(This,pValue)	\
-    ( (This)->lpVtbl -> get_ProxyAccount(This,pValue) ) 
-
-#define IOptions_get_ProxyPassword(This,pValue)	\
-    ( (This)->lpVtbl -> get_ProxyPassword(This,pValue) ) 
-
-#define IOptions_put_UseProxyServer(This,Value)	\
-    ( (This)->lpVtbl -> put_UseProxyServer(This,Value) ) 
-
-#define IOptions_put_ProxyServer(This,Value)	\
-    ( (This)->lpVtbl -> put_ProxyServer(This,Value) ) 
-
-#define IOptions_put_UseProxyAuthentication(This,Value)	\
-    ( (This)->lpVtbl -> put_UseProxyAuthentication(This,Value) ) 
-
-#define IOptions_put_ProxyAccount(This,Value)	\
-    ( (This)->lpVtbl -> put_ProxyAccount(This,Value) ) 
-
-#define IOptions_put_ProxyPassword(This,Value)	\
-    ( (This)->lpVtbl -> put_ProxyPassword(This,Value) ) 
-
 #define IOptions_get_GatewayAccount(This,pValue)	\
     ( (This)->lpVtbl -> get_GatewayAccount(This,pValue) ) 
 
@@ -13493,18 +10643,6 @@ EXTERN_C const IID IID_IOptions;
 
 #define IOptions_GetLogDir(This,Value)	\
     ( (This)->lpVtbl -> GetLogDir(This,Value) ) 
-
-#define IOptions_GetAppID(This,pValue)	\
-    ( (This)->lpVtbl -> GetAppID(This,pValue) ) 
-
-#define IOptions_GetServiceUser(This,pValue)	\
-    ( (This)->lpVtbl -> GetServiceUser(This,pValue) ) 
-
-#define IOptions_GetServiceName(This,pValue)	\
-    ( (This)->lpVtbl -> GetServiceName(This,pValue) ) 
-
-#define IOptions_GetProductName(This,pValue)	\
-    ( (This)->lpVtbl -> GetProductName(This,pValue) ) 
 
 #define IOptions_HasUpdate(This,pVal)	\
     ( (This)->lpVtbl -> HasUpdate(This,pVal) ) 
@@ -13572,12 +10710,6 @@ EXTERN_C const IID IID_IDatabase;
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ChangeListenerIsLocal( 
             /* [in] */ VARIANT_BOOL Value) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DatabaseAppName( 
-            /* [retval][out] */ BSTR *Value) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DatabaseAppName( 
-            /* [in] */ BSTR Value) = 0;
-        
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_AdoConnection( 
             /* [retval][out] */ VARIANT *pVal) = 0;
         
@@ -13605,21 +10737,8 @@ EXTERN_C const IID IID_IDatabase;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetMessageTypes( 
             /* [retval][out] */ IMessageTypes **ppVal) = 0;
         
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetCampaigns( 
-            /* [retval][out] */ ICampaigns **ppVal) = 0;
-        
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ResetConnection( 
             /* [defaultvalue][in] */ LONG lFlags = 0) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SubscribeCustomEvent( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE NotifyCustomEvent( 
-            /* [in] */ BSTR Value) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE HasCustomEvent( 
-            /* [in] */ BSTR Value,
-            /* [retval][out] */ VARIANT_BOOL *pValue) = 0;
         
     };
     
@@ -13716,14 +10835,6 @@ EXTERN_C const IID IID_IDatabase;
             IDatabase * This,
             /* [in] */ VARIANT_BOOL Value);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DatabaseAppName )( 
-            IDatabase * This,
-            /* [retval][out] */ BSTR *Value);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DatabaseAppName )( 
-            IDatabase * This,
-            /* [in] */ BSTR Value);
-        
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AdoConnection )( 
             IDatabase * This,
             /* [retval][out] */ VARIANT *pVal);
@@ -13760,26 +10871,9 @@ EXTERN_C const IID IID_IDatabase;
             IDatabase * This,
             /* [retval][out] */ IMessageTypes **ppVal);
         
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCampaigns )( 
-            IDatabase * This,
-            /* [retval][out] */ ICampaigns **ppVal);
-        
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ResetConnection )( 
             IDatabase * This,
             /* [defaultvalue][in] */ LONG lFlags);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SubscribeCustomEvent )( 
-            IDatabase * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NotifyCustomEvent )( 
-            IDatabase * This,
-            /* [in] */ BSTR Value);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *HasCustomEvent )( 
-            IDatabase * This,
-            /* [in] */ BSTR Value,
-            /* [retval][out] */ VARIANT_BOOL *pValue);
         
         END_INTERFACE
     } IDatabaseVtbl;
@@ -13844,12 +10938,6 @@ EXTERN_C const IID IID_IDatabase;
 #define IDatabase_put_ChangeListenerIsLocal(This,Value)	\
     ( (This)->lpVtbl -> put_ChangeListenerIsLocal(This,Value) ) 
 
-#define IDatabase_get_DatabaseAppName(This,Value)	\
-    ( (This)->lpVtbl -> get_DatabaseAppName(This,Value) ) 
-
-#define IDatabase_put_DatabaseAppName(This,Value)	\
-    ( (This)->lpVtbl -> put_DatabaseAppName(This,Value) ) 
-
 #define IDatabase_get_AdoConnection(This,pVal)	\
     ( (This)->lpVtbl -> get_AdoConnection(This,pVal) ) 
 
@@ -13877,20 +10965,8 @@ EXTERN_C const IID IID_IDatabase;
 #define IDatabase_GetMessageTypes(This,ppVal)	\
     ( (This)->lpVtbl -> GetMessageTypes(This,ppVal) ) 
 
-#define IDatabase_GetCampaigns(This,ppVal)	\
-    ( (This)->lpVtbl -> GetCampaigns(This,ppVal) ) 
-
 #define IDatabase_ResetConnection(This,lFlags)	\
     ( (This)->lpVtbl -> ResetConnection(This,lFlags) ) 
-
-#define IDatabase_SubscribeCustomEvent(This,Value)	\
-    ( (This)->lpVtbl -> SubscribeCustomEvent(This,Value) ) 
-
-#define IDatabase_NotifyCustomEvent(This,Value)	\
-    ( (This)->lpVtbl -> NotifyCustomEvent(This,Value) ) 
-
-#define IDatabase_HasCustomEvent(This,Value,pValue)	\
-    ( (This)->lpVtbl -> HasCustomEvent(This,Value,pValue) ) 
 
 #endif /* COBJMACROS */
 
@@ -13943,22 +11019,6 @@ EXTERN_C const CLSID CLSID_Channel;
 
 class DECLSPEC_UUID("31061798-79BE-4D8E-820A-5E7DF99B4B60")
 Channel;
-#endif
-
-EXTERN_C const CLSID CLSID_Campaigns;
-
-#ifdef __cplusplus
-
-class DECLSPEC_UUID("D1D5D984-5EDB-42DD-9209-70A07A42AB57")
-Campaigns;
-#endif
-
-EXTERN_C const CLSID CLSID_Campaign;
-
-#ifdef __cplusplus
-
-class DECLSPEC_UUID("43B40955-F81A-497B-BEB6-A39992C6558E")
-Campaign;
 #endif
 
 EXTERN_C const CLSID CLSID_Channels;
