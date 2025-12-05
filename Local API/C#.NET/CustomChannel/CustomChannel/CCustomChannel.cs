@@ -34,6 +34,9 @@ namespace CustomChannel
      */
     protected override int OnStartup()
     {
+      // log to activity log
+      Log("Channel started");
+
       // Set the channel status to 'CONNECTED' (green)
       UpdateChannelStatus(m_oConstants.CHANNELSTATUS_CONNECTED);
 
@@ -45,6 +48,8 @@ namespace CustomChannel
      */
     protected override void OnReconfigure()
     {
+      Log("Reconfigure");
+
       // cache the channel parameters we need often for performance
       m_oConfig.m_nMaxQueueSize = m_oChannel.MaxQueueSize;
 
@@ -58,6 +63,8 @@ namespace CustomChannel
      */
     protected override void OnShutdown()
     {
+      Log("Stopping channel");
+
       /**
        * Set the channel status to disconnected (grey) in the Auron WISe manager
        */
@@ -84,6 +91,8 @@ namespace CustomChannel
      */
     protected override void OnStatusUpdate()
     {
+      Log("Process status update");
+
       AXMMCFGLib.SmsMessage oMessage = null;
       bool bNotifyStatusUpdate = false;
 
